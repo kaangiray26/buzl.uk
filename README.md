@@ -1,2 +1,2 @@
-# kaangiray.com
+# buzl.uk
 My Personal Website
