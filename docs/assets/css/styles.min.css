@@ -1,1 +1,1 @@
-.fit-cover{object-fit:cover}:root{--background:#ffffff;--terminal-background:var(--bs-dark);--card-background:#ffffff;--text-general:#212529}body,html{height:100%;margin:0}a{color:var(--bs-red)}
+.fit-cover{object-fit:cover}:root{--background:#ffffff;--terminal-background:var(--bs-dark);--card-background:#ffffff;--text-general:#212529}body,html{height:100%;margin:0}a{color:var(--bs-red);font-weight:700}
