@@ -1,0 +1,74 @@
+:root {
+    --background-color: #1a1a1b;
+    --terminal-background: var(--bs-dark);
+    --card-background: var(--bs-dark);
+    --text-general: #6c757d;
+    --text-lightmode: #000000;
+    --text-nightmode: #6c757d;
+    --background-color-lightmode: #ffffff;
+    --background-color-nightmode: #1a1a1b;
+    --inverted-color: #ffffff;
+}
+
+#app {
+    height: 100%;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-color: var(--background-color);
+}
+
+a {
+    color: #A8112E;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    color: royalblue;
+}
+
+p {
+    color: var(--text-general);
+}
+
+.right-0 {
+    right: 0 !important;
+}
+
+.live-button {
+    opacity: 1 !important;
+}
+
+.card-body {
+    padding: 1.5em;
+}
+
+.card-img-top:hover {
+    opacity: 0.5;
+}
+
+.breadcrumb {
+    padding: 1em;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: ">";
+}
+
+.contact-item {
+    background-color: var(--background-color);
+}
+
+.contact-item:hover {
+    opacity: 0.5;
+}
