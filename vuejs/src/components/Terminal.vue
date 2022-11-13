@@ -69,8 +69,9 @@ function get_lines() {
 }
 
 async function keyPress(event) {
-    if (event.target.tagName != 'INPUT' && event.key == 'q') {
+    if (event.ctrlKey && event.key == 'k') {
         event.preventDefault();
+        window.scrollTo(0, document.body.scrollHeight);
         terminal_input.value.focus();
         return;
     }
