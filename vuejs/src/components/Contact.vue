@@ -5,7 +5,7 @@
         <img class="rounded img-fluid" src="/assets/me.jpg"
             alt="Computer science student, writer, hobbyist, whatever..." height="240" width="240">
         <div class="position-absolute right-0 bottom-0">
-            <img class="live-button m-2" src="/assets/favicon.svg" width="32p" height="32px">
+            <img class="live-button m-2" src="/assets/favicon.svg" width="32p" height="32px" alt="Favicon">
         </div>
     </div>
     <div class="d-flex">
