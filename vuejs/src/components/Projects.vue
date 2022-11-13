@@ -18,7 +18,7 @@
                                     project.name
                             }}</h4>
                         </a>
-                        <span class="text-muted fw-light">{{ project.description }}</span>
+                        <span class="text-muted">{{ project.description }}</span>
                     </div>
                 </div>
             </div>
