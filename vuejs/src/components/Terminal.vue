@@ -7,7 +7,7 @@
                     style="background: var(--background-color);color: var(--text-general);border-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;border-left-style: none;">$</span>
                 <input ref="terminal_input" class="form-control font-monospace" type="text"
                     style="background: var(--background-color);color: var(--text-general);border-style: none;"
-                    autocomplete="off" autofocus @keyup.enter="evaluate" />
+                    autocomplete="off" autofocus @keyup.enter="evaluate" aria-label="Terminal Input" />
             </div>
             <p ref="splash_text" class="mb-2" style="margin: 0px;">></p>
         </div>
