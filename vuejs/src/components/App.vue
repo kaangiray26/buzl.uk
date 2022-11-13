@@ -9,7 +9,7 @@
                             <a href="https://buzl.uk">
                                 <span>
                                     <img class="img-fluid" src="/assets/favicon.svg" width="24" height="24"
-                                        label="Favicon" />
+                                        alt="Favicon" />
                                 </span>
                             </a>
                         </li>
