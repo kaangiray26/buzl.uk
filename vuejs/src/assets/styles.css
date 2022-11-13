@@ -72,3 +72,7 @@ p {
 .contact-item:hover {
     opacity: 0.5;
 }
+
+.project-img:hover {
+    scale: 1.2;
+}
