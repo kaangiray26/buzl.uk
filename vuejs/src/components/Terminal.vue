@@ -47,6 +47,9 @@ async function set_lightmode() {
 async function splashText() {
     let response = await get_lines();
     let lines = response.split(/\r?\n/);
+    clearTimeout(timeout_id.value);
+    type_index.value = 0;
+    line.value = "> ";
     typeQuote(lines[Math.floor(Math.random() * lines.length)]);
 }
 
@@ -178,6 +181,12 @@ async function evaluate() {
 
         if (command == 'email') {
             type("kaangiray26@protonmail.com");
+            return
+        }
+
+        if (command == 'quote') {
+            splashText();
+            return
         }
 
         // Nightmode
