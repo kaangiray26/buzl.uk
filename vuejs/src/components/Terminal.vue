@@ -72,6 +72,24 @@ function get_lines() {
 }
 
 async function keyPress(event) {
+    if (event.altKey && event.key == "1") {
+        event.preventDefault();
+        router.push('/');
+        return;
+    }
+
+    if (event.altKey && event.key == "2") {
+        event.preventDefault();
+        router.push('/projects');
+        return;
+    }
+
+    if (event.altKey && event.key == "3") {
+        event.preventDefault();
+        router.push('/contact');
+        return;
+    }
+
     if (event.ctrlKey && event.key == 'k') {
         event.preventDefault();
         window.scrollTo(0, document.body.scrollHeight);
