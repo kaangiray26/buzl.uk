@@ -1,12 +1,12 @@
 :root {
-    --background-color: #1a1a1b;
-    --terminal-background: var(--bs-dark);
-    --card-background: var(--bs-dark);
-    --text-general: #fff;
+    --background-color: #0D1117;
+    --terminal-background: #161B22;
+    --card-background: #161B22;
+    --text-general: #c9d1d9;
     --text-lightmode: #000000;
-    --text-nightmode: #fff;
+    --text-nightmode: #c9d1d9;
     --background-color-lightmode: #ffffff;
-    --background-color-nightmode: #1a1a1b;
+    --background-color-nightmode: #0D1117;
     --inverted-color: #ffffff;
 }
 

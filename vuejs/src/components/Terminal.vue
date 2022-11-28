@@ -28,8 +28,8 @@ const r = document.querySelector(':root');
 
 async function set_nightmode() {
     r.style.setProperty('--background-color', 'var(--background-color-nightmode)');
-    r.style.setProperty('--card-background', 'var(--bs-dark)');
-    r.style.setProperty('--terminal-background', 'var(--bs-white)');
+    r.style.setProperty('--card-background', '#161B22');
+    r.style.setProperty('--terminal-background', '#161B22');
     r.style.setProperty('--text-general', 'var(--text-nightmode)');
     r.style.setProperty('--inverted-color', 'var(--bs-white)');
     localStorage.setItem('display', 'nightmode');
