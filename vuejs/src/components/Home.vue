@@ -1,5 +1,5 @@
 <template>
-    <h1 style="color: #A8112E;font-family: 'JetBrains Mono', monospace;">KGB Projects</h1>
+    <h1 style="color: #A8112E;font-family: 'JetBrains Mono', monospace;">buzl.uk</h1>
     <h6 class="text-muted card-subtitle mb-2">~</h6>
     <p class="card-text" style="color: var(--text-general);font-family: Inter, sans-serif;">
         My name is Kaan Giray Buzluk. I am a computer science student at RWTH Aachen and I've been coding for over 8

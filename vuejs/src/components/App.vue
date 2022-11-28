@@ -1,7 +1,7 @@
 <template>
     <div class="row g-0 d-flex justify-content-center w-100 h-100">
-        <div class="col-11 col-lg-6 col-xl-6 col-xxl-6">
-            <div class="card border-dark border rounded shadow-lg my-3" style="background: var(--card-background);">
+        <div class="col-12 col-lg-4 col-xl-4 col-xxl-4 p-2">
+            <div class="card border-dark border rounded shadow-lg" style="background: var(--card-background);">
                 <div class="card-body border-0 shadow-none">
                     <ol class="breadcrumb border rounded border-dark shadow-lg flex-fill mb-4"
                         style="background: var(--background-color);border-style: none;">
