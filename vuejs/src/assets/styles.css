@@ -53,6 +53,12 @@ p {
     padding: 1.5em;
 }
 
+.bordered {
+    border-color: #30363D;
+    border-style: solid;
+    border-width: 1px;
+}
+
 .card-img-top:hover {
     opacity: 0.5;
 }

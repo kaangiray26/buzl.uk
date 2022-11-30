@@ -1,5 +1,5 @@
 <template>
-    <div class="card border-dark border rounded shadow-lg mt-2" style="background: var(--card-background);">
+    <div class="card bordered rounded shadow-lg mt-2" style="background: var(--card-background);">
         <div class="card-body border-0 shadow-none">
             <div class="input-group border rounded border-dark shadow-lg mb-4"
                 style="border-style: none;border-color: var(--background-color);">

@@ -1,10 +1,10 @@
 <template>
     <div class="row g-0 d-flex justify-content-center w-100 h-100">
         <div class="col-12 col-lg-4 col-xl-4 col-xxl-4 p-2">
-            <div class="card border-dark border rounded shadow-lg" style="background: var(--card-background);">
+            <div class="card bordered rounded shadow-lg" style="background: var(--card-background);">
                 <div class="card-body border-0 shadow-none">
-                    <ol class="breadcrumb border rounded border-dark shadow-lg flex-fill mb-4"
-                        style="background: var(--background-color);border-style: none;">
+                    <ol class="breadcrumb bordered rounded shadow-lg flex-fill mb-4"
+                        style="background: var(--background-color);">
                         <li class="breadcrumb-item">
                             <a href="https://buzl.uk">
                                 <span>
