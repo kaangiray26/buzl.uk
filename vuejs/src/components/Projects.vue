@@ -9,7 +9,7 @@
             <div class="col" v-for="project in projs">
                 <div>
                     <a :href="project.link">
-                        <img class="img-fluid project-img rounded d-block w-100 fit-cover" :src="project.image"
+                        <img class="img-fluid img-thumbnail project-img rounded d-block fit-cover" :src="project.image"
                             :alt="project.description" />
                     </a>
                     <div class="py-4">

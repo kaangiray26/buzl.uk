@@ -1,6 +1,18 @@
 {
     "projects": [
         {
+            "name": "Forte",
+            "description": "Self-hosted, music streaming platform",
+            "image": "/project_images/forte.png",
+            "link": "https://github.com/kaangiray26/forte"
+        },
+        {
+            "name": "Sync",
+            "description": "A P2P Synchronized Media Player",
+            "image": "/project_images/sync.png",
+            "link": "https://sync.buzl.uk"
+        },
+        {
             "name": "Deezer+",
             "description": "Deezer Web Player with extra features",
             "image": "/project_images/deezer-plus.png",
