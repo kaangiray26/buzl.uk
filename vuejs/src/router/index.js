@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "/components/Home.vue";
-import Projects from "/components/Projects.vue";
+import Subs from "/components/Subs.vue";
 import Contact from "/components/Contact.vue";
 
 const routes = [
@@ -12,17 +12,17 @@ const routes = [
         }
     },
     {
-        path: "/projects",
-        component: Projects,
+        path: "/subs",
+        component: Subs,
         meta: {
-            title: 'buzl.uk - Projects'
+            title: 'buzl.uk | Subs'
         }
     },
     {
         path: "/contact",
         component: Contact,
         meta: {
-            title: 'buzl.uk - Contact'
+            title: 'buzl.uk | Contact'
         }
     }
 ];

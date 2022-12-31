@@ -1,15 +1,16 @@
 <template>
-    <div class="card bordered rounded shadow-lg mt-2" style="background: var(--card-background);">
-        <div class="card-body border-0 shadow-none">
-            <div class="input-group border rounded border-dark shadow-lg mb-4"
-                style="border-style: none;border-color: var(--background-color);">
-                <span class="input-group-text font-monospace"
-                    style="background: var(--background-color);color: var(--text-general);border-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;border-left-style: none;">$</span>
-                <input ref="terminal_input" class="form-control font-monospace" type="text"
-                    style="background: var(--background-color);color: var(--text-general);border-style: none;"
-                    autocomplete="off" autofocus @keyup.enter="evaluate" aria-label="Terminal Input" />
+    <div class="container pb-4">
+        <div class="card rounded border-dark" @click="focusTerminal">
+            <div class="card-body border-0">
+                <div class="input-group mb-4" style="border-style: none;border-color: var(--background-color);">
+                    <span class="input-group-text font-monospace"
+                        style="background: var(--background-color);color: var(--text-general);border-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;border-left-style: none;">$</span>
+                    <input ref="terminal_input" class="terminal_input font-monospace d-flex flex-fill" type="text"
+                        style="background: var(--background-color);color: var(--text-general);border-style: none;"
+                        autocomplete="off" @keyup.enter="evaluate" aria-label="Terminal Input" />
+                </div>
+                <p ref="splash_text" class="mb-2" style="margin: 0px;">></p>
             </div>
-            <p ref="splash_text" class="mb-2" style="margin: 0px;">></p>
         </div>
     </div>
 </template>
@@ -72,28 +73,10 @@ function get_lines() {
 }
 
 async function keyPress(event) {
-    if (event.altKey && event.key == "1") {
-        event.preventDefault();
-        router.push('/');
-        return;
-    }
-
-    if (event.altKey && event.key == "2") {
-        event.preventDefault();
-        router.push('/projects');
-        return;
-    }
-
-    if (event.altKey && event.key == "3") {
-        event.preventDefault();
-        router.push('/contact');
-        return;
-    }
-
     if (event.ctrlKey && event.key == 'k') {
         event.preventDefault();
-        window.scrollTo(0, document.body.scrollHeight);
-        terminal_input.value.focus();
+        window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
+        terminal_input.value.focus({ preventScroll: true });
         return;
     }
 }
@@ -220,6 +203,18 @@ async function evaluate() {
         }
     }
 }
+
+async function focusTerminal() {
+    terminal_input.value.focus({ preventScroll: true });
+}
+
+defineExpose({
+    show: () => {
+        window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
+        terminal_input.value.focus({ preventScroll: true });
+    },
+})
+
 onMounted(() => {
     let mode = localStorage.getItem('display');
     if (mode === 'lightmode') {
