@@ -2,38 +2,40 @@
     <div class="container py-4">
         <div class="row">
             <div class="col">
-                <div class="card rounded border-0">
-                    <div class="card-body d-flex align-items-center justify-content-between py-2">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb p-0 m-0">
-                                <li class="breadcrumb-item">
-                                    <a href="https://buzl.uk">
-                                        <span>
-                                            <img class="img-fluid bg-dark" src="/assets/favicon.svg" width="24"
-                                                height="24">
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="breadcrumb-item">
-                                    <router-link to="/">Home</router-link>
-                                </li>
-                                <li class="breadcrumb-item">
-                                    <router-link to="/subs">Subs</router-link>
-                                </li>
-                                <li class="breadcrumb-item">
-                                    <router-link to="/contact">Contact</router-link>
-                                </li>
-                            </ol>
+                <div class="card rounded border-0 pb-0">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-between pb-0">
+                        <nav class="navbar flex-fill flex-nowrap w-100">
+                            <div class="container-fluid">
+                                <a href="https://buzl.uk">
+                                    <img class="bg-dark" src="/assets/favicon.svg" width="38" height="38">
+                                </a>
+                                <div class="btn-group">
+                                    <button class="btn btn-dark bi bi-terminal-fill text-nowrap"
+                                        @click="emits('switchToTerminal')">
+                                        <span class="mx-2">Ctrl + K</span>
+                                    </button>
+                                    <button class="btn btn-dark bi"
+                                        :class="{ 'bi-sun-fill': mode == 'light', 'bi-moon-fill': mode == 'dark' }"
+                                        @click="changeMode">
+                                    </button>
+                                </div>
+                            </div>
                         </nav>
-                        <div class="btn-group">
-                            <button class="btn btn-dark bi bi-terminal-fill" @click="emits('switchToTerminal')">
-                                <span class="mx-2">Ctrl + K</span>
-                            </button>
-                            <button class="btn btn-dark bi"
-                                :class="{ 'bi-sun-fill': mode == 'light', 'bi-moon-fill': mode == 'dark' }"
-                                @click="changeMode">
-                            </button>
-                        </div>
+                        <nav class="navbar flex-fill flex-nowrap w-100">
+                            <div class="container-fluid">
+                                <ol class="breadcrumb d-flex flex-row flex-fill p-0 m-0">
+                                    <li class="breadcrumb-item text-nowrap fw-bold fs-5">
+                                        <router-link to="/">Home</router-link>
+                                    </li>
+                                    <li class="breadcrumb-item text-nowrap fw-bold fs-5">
+                                        <router-link to="/subs">Subs</router-link>
+                                    </li>
+                                    <li class="breadcrumb-item text-nowrap fw-bold fs-5">
+                                        <router-link to="/contact">Contact</router-link>
+                                    </li>
+                                </ol>
+                            </div>
+                        </nav>
                     </div>
                 </div>
             </div>
