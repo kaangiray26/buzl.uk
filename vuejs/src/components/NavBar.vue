@@ -1,11 +1,11 @@
 <template>
     <div class="container py-4">
-        <div class="row">
+        <div class="row gx-0">
             <div class="col">
                 <div class="card rounded border-0 pb-0">
-                    <div class="card-body d-flex flex-column align-items-center justify-content-between pb-0">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-between p-0">
                         <nav class="navbar flex-fill flex-nowrap w-100">
-                            <div class="container-fluid">
+                            <div class="container-fluid px-0">
                                 <a href="https://buzl.uk">
                                     <img class="bg-dark" src="/assets/favicon.svg" width="38" height="38">
                                 </a>
@@ -22,7 +22,7 @@
                             </div>
                         </nav>
                         <nav class="navbar flex-fill flex-nowrap w-100">
-                            <div class="container-fluid">
+                            <div class="container-fluid px-0">
                                 <ol class="breadcrumb d-flex flex-row flex-fill p-0 m-0">
                                     <li class="breadcrumb-item text-nowrap fw-bold fs-5">
                                         <router-link to="/">Home</router-link>

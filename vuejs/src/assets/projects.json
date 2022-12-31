@@ -8,13 +8,6 @@
             "address": "https://forte.buzl.uk/"
         },
         {
-            "name": "Sync",
-            "description": "A P2P Synchronized Media Player",
-            "image": "/project_images/sync.png",
-            "link": "https://sync.buzl.uk",
-            "address": "https://sync.buzl.uk/"
-        },
-        {
             "name": "Deezer+",
             "description": "Deezer Web Player with extra features",
             "image": "/project_images/deezer-plus.png",
@@ -22,11 +15,25 @@
             "address": "https://deezer.buzl.uk/"
         },
         {
+            "name": "Sync",
+            "description": "A P2P Synchronized Media Player",
+            "image": "/project_images/sync.png",
+            "link": "https://sync.buzl.uk",
+            "address": "https://sync.buzl.uk/"
+        },
+        {
             "name": "Share",
             "description": "A Progressive Web App for P2P File Sharing",
             "image": "/project_images/share.png",
             "link": "https://share.buzl.uk/",
             "address": "https://share.buzl.uk/"
+        },
+        {
+            "name": "Pixel Motion Photos",
+            "description": "Convert Pixel Motion Photos to Videos",
+            "image": "/project_images/pixel.png",
+            "link": "https://pixel.buzl.uk/",
+            "address": "https://pixel.buzl.uk/"
         },
         {
             "name": "Alles gut",

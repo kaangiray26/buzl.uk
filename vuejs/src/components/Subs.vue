@@ -1,7 +1,7 @@
 <template>
     <div class="container pb-4">
         <div class="card rounded border-0">
-            <div class="card-body">
+            <div class="card-body px-0">
                 <h1 class="card-heading">Subdomains</h1>
                 <h6 class="text-muted card-subtitle mb-2">~</h6>
                 <ul class="list-group">
