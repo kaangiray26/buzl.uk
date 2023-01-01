@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="container pb-4">
-            <div class="row row-cols-3 g-4 mb-2">
+            <div class="row row-cols-4 g-4 mb-2">
                 <div class="col" v-for="project in projects.slice(4, -1)">
                     <Project :data="project"></Project>
                 </div>
