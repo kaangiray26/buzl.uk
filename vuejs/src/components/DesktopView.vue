@@ -1,7 +1,7 @@
 <template>
     <div class="d-flex flex-column hide-on-mobile">
         <div class="container pb-4" style="height: 50vh !important;">
-            <div class="row gx-4 h-100">
+            <div class="row gx-4 h-100 pb-4">
                 <div class="col-6 h-100">
                     <Project :data="projects[0]"></Project>
                 </div>
@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="container pb-4">
-            <div class="row row-cols-4 g-4 mb-2">
+            <div class="row row-cols-4 g-4 pb-4">
                 <div class="col" v-for="project in projects.slice(4, -1)">
                     <Project :data="project"></Project>
                 </div>
@@ -29,9 +29,11 @@
                     <Project :data="project"></Project>
                 </div>
             </div>
-            <span class="text-decoration-underline">
-                All the project images you see on this page are created with DALL-E by OpenAI.
-            </span>
+            <div class="mx-4 pb-4">
+                <span class="text-white">
+                    Some of the project images you see on this page are created with DALL-E by OpenAI.
+                </span>
+            </div>
         </div>
     </div>
 </template>
