@@ -2,9 +2,8 @@
     <div class="container pb-4">
         <div class="card rounded border-0 m-4">
             <div class="card-body px-0">
-                <h1 class="card-heading">Contact</h1>
-                <h6 class="text-muted card-subtitle mb-2">~</h6>
-                <div class="d-inline-flex position-relative overflow-hidden ratio-1x1 mb-4">
+                <h1 class="card-heading pb-2">Contact</h1>
+                <div class="d-inline-flex position-relative overflow-hidden ratio-1x1 pb-2 mb-4">
                     <img class="rounded img-fluid" src="/assets/me.jpg"
                         alt="Computer science student, writer, hobbyist, whatever..." height="240" width="240">
                     <div class="position-absolute right-0 bottom-0">
