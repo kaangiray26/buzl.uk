@@ -4,127 +4,148 @@
             "name": "Forte",
             "description": "Self-hosted, music streaming platform",
             "image": "/project_images/forte.png",
-            "link": "https://github.com/kaangiray26/forte"
-        },
-        {
-            "name": "Sync",
-            "description": "A P2P Synchronized Media Player",
-            "image": "/project_images/sync.png",
-            "link": "https://sync.buzl.uk"
+            "link": "https://github.com/kaangiray26/forte",
+            "address": "https://forte.buzl.uk/"
         },
         {
             "name": "Deezer+",
             "description": "Deezer Web Player with extra features",
             "image": "/project_images/deezer-plus.png",
-            "link": "https://deezer.buzl.uk"
+            "link": "https://deezer.buzl.uk",
+            "address": "https://deezer.buzl.uk/"
+        },
+        {
+            "name": "Sync",
+            "description": "A P2P Synchronized Media Player",
+            "image": "/project_images/sync.png",
+            "link": "https://sync.buzl.uk",
+            "address": "https://sync.buzl.uk/"
         },
         {
             "name": "Share",
             "description": "A Progressive Web App for P2P File Sharing",
             "image": "/project_images/share.png",
-            "link": "https://share.buzl.uk/"
+            "link": "https://share.buzl.uk/",
+            "address": "https://share.buzl.uk/"
+        },
+        {
+            "name": "Pixel Motion Photos",
+            "description": "Convert Pixel Motion Photos to Videos",
+            "image": "/project_images/pixel.png",
+            "link": "https://pixel.buzl.uk/",
+            "address": "https://pixel.buzl.uk/"
         },
         {
             "name": "Alles gut",
             "description": "Colloborative Daily Status",
             "image": "/project_images/allesgut.png",
-            "link": "https://allesgut.buzl.uk/"
+            "link": "https://allesgut.buzl.uk/",
+            "address": "https://allesgut.buzl.uk/"
         },
         {
             "name": "GitLounge",
             "description": "Social Networking off GitHub",
             "image": "/project_images/gitlounge.png",
-            "link": "https://git.buzl.uk/"
+            "link": "https://git.buzl.uk/",
+            "address": "https://git.buzl.uk/"
         },
         {
             "name": "KgbDNS",
             "description": "Free self-hosted DDNS service",
             "image": "/project_images/kgbdns.png",
-            "link": "https://www.kgbdns.com/"
-        },
-        {
-            "name": "Cinevision",
-            "description": "Match movies with your friends",
-            "image": "/project_images/cinevision.png",
-            "link": "https://cinevision.herokuapp.com/"
+            "link": "https://www.kgbdns.com/",
+            "address": "https://www.kgbdns.com/"
         },
         {
             "name": "FakeAI",
             "description": "Imitating Human Responses",
             "image": "/project_images/fakeai.png",
-            "link": "https://fakeai.buzl.uk/"
+            "link": "https://fakeai.buzl.uk/",
+            "address": "https://fakeai.buzl.uk/"
         },
         {
             "name": "RedDown",
             "description": "Client-side Reddit Media Downloader",
             "image": "/project_images/reddown.png",
-            "link": "https://red.buzl.uk/"
+            "link": "https://red.buzl.uk/",
+            "address": "https://red.buzl.uk/"
         },
         {
             "name": "Sourtimes",
             "description": "The Python Eksisozluk API Wrapper",
             "image": "/project_images/sourtimes.png",
-            "link": "https://github.com/kaangiray26/sourtimes"
+            "link": "https://github.com/kaangiray26/sourtimes",
+            "address": "https://pypi.org/project/sourtimes/"
         },
         {
             "name": "cAPIsce",
             "description": "The Open-Source API Testing Tool",
             "image": "/project_images/capisce.png",
-            "link": "https://capisce.buzl.uk/"
+            "link": "https://capisce.buzl.uk/",
+            "address": "https://capisce.buzl.uk/"
         },
         {
             "name": "tracker.fm",
             "description": "See what your Last.fm friends are listening to in real-time.",
             "image": "/project_images/tracker.fm.png",
-            "link": "https://tracker.buzl.uk/"
+            "link": "https://tracker.buzl.uk/",
+            "address": "https://tracker.buzl.uk/"
         },
         {
             "name": "xchain",
             "description": "Encrypt Files with Shared Keys",
             "image": "/project_images/xchain.png",
-            "link": "https://github.com/kaangiray26/xchain-pub"
+            "link": "https://github.com/kaangiray26/xchain-pub",
+            "address": "https://github.com/kaangiray26/xchain-pub/"
         },
         {
             "name": "easy-click",
             "description": "Use Your Keyboard To Simulate Mouse Clicks",
             "image": "/project_images/easy-click.png",
-            "link": "https://github.com/kaangiray26/easy-click"
+            "link": "https://github.com/kaangiray26/easy-click",
+            "address": "https://github.com/kaangiray26/easy-click/"
         },
         {
             "name": "shortcut",
             "description": "Serverless URL Redirector",
             "image": "/project_images/shortcut.png",
-            "link": "https://kaangiray26.github.io/shortcut/"
+            "link": "https://kaangiray26.github.io/shortcut/",
+            "address": "https://kaangiray26.github.io/shortcut/"
         },
         {
             "name": "gitlinker",
             "description": "Serverless URL Shortener",
             "image": "/project_images/gitlinker.png",
-            "link": "https://gitlinker.github.io/"
+            "link": "https://gitlinker.github.io/",
+            "address": "https://gitlinker.github.io/"
         },
         {
             "name": "tunein-cli",
             "description": "Browse TuneIn streams from your command line",
             "image": "/project_images/tunein-cli.png",
-            "link": "https://github.com/kaangiray26/tunein-cli"
+            "link": "https://github.com/kaangiray26/tunein-cli",
+            "address": "https://github.com/kaangiray26/tunein-cli/"
         },
         {
             "name": "pitch-perfect",
             "description": "OTP Messaging with a GUI",
             "image": "/project_images/pitch-perfect.png",
-            "link": "https://github.com/kaangiray26/pitch-perfect"
+            "link": "https://github.com/kaangiray26/pitch-perfect",
+            "address": "https://github.com/kaangiray26/pitch-perfect/"
         },
         {
             "name": "deadswitch",
             "description": "A Dead Man's Switch",
             "image": "/project_images/deadswitch.png",
-            "link": "https://github.com/kaangiray26/deadswitch"
+            "link": "https://github.com/kaangiray26/deadswitch",
+            "address": "https://github.com/kaangiray26/deadswitch/"
         },
         {
             "name": "drifter",
             "description": "Another GTK Client for Reddit",
             "image": "/project_images/drifter.png",
-            "link": "https://github.com/kaangiray26/drifter-gtk"
+            "link": "https://github.com/kaangiray26/drifter-gtk",
+            "address": "https://github.com/kaangiray26/drifter-gtk/"
         }
     ]
 }
