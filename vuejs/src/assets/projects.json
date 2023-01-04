@@ -22,6 +22,13 @@
             "address": "https://sync.buzl.uk/"
         },
         {
+            "name": "Sync Extension",
+            "description": "A Firefox Extension to Sync All Videos",
+            "image": "/project_images/sync_ext.svg",
+            "link": "https://addons.mozilla.org/en-US/firefox/addon/sync_ext/",
+            "address": "https://github.com/kaangiray26/sync_ext "
+        },
+        {
             "name": "Share",
             "description": "A Progressive Web App for P2P File Sharing",
             "image": "/project_images/share.png",

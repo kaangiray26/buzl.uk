@@ -1,6 +1,6 @@
 <template>
     <div class="container pb-4">
-        <div class="card rounded border" @click="focusTerminal">
+        <div class="card rounded border mx-4" @click="focusTerminal">
             <div class="card-body border-0">
                 <div class="input-group mb-4" style="border-style: none;border-color: var(--background-color);">
                     <span class="input-group-text font-monospace"
@@ -185,11 +185,6 @@ defineExpose({
 })
 
 onMounted(() => {
-    let mode = localStorage.getItem('display');
-    if (mode === 'lightmode') {
-        set_lightmode();
-    }
-
     document.addEventListener('keydown', keyPress);
     splashText();
 });
