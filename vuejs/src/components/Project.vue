@@ -1,5 +1,5 @@
 <template>
-    <div class="hide-on-mobile card h-100 rounded-0 clickable mx-4" @click="openProject">
+    <div class="hide-on-mobile card rounded-0 clickable mx-4" @click="openProject">
         <img :src="props.data.image" class="project-image img-thumbnail" :alt="props.data.name">
         <div class="card-img-overlay rounded-0 d-flex align-items-center bottom-text p-4">
             <div class="mt-auto">
