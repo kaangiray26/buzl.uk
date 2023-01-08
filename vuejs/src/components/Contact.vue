@@ -6,9 +6,6 @@
                 <div class="d-inline-flex position-relative overflow-hidden ratio-1x1 pb-2 mb-4">
                     <img class="rounded img-fluid" src="/assets/me.jpg"
                         alt="Computer science student, writer, hobbyist, whatever..." height="240" width="240">
-                    <div class="position-absolute right-0 bottom-0">
-                        <img class="live-button m-2" src="/assets/favicon.svg" width="32p" height="32px" alt="Favicon">
-                    </div>
                 </div>
                 <div class="pb-4">
                     <span>Kaan Giray Buzluk</span>
