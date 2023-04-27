@@ -11,7 +11,7 @@
             "name": "Deezer+",
             "description": "Deezer Web Player with extra features",
             "image": "/project_images/deezer-plus.png",
-            "link": "https://deezer.buzl.uk",
+            "link": "https://github.com/kaangiray26/deezer-plus",
             "address": "https://deezer.buzl.uk/"
         },
         {
@@ -60,8 +60,8 @@
             "name": "KgbDNS",
             "description": "Free self-hosted DDNS service",
             "image": "/project_images/kgbdns.png",
-            "link": "https://www.kgbdns.com/",
-            "address": "https://www.kgbdns.com/"
+            "link": "https://github.com/kaangiray26/kgbdns",
+            "address": "https://github.com/kaangiray26/kgbdns"
         },
         {
             "name": "FakeAI",
@@ -88,8 +88,8 @@
             "name": "cAPIsce",
             "description": "The Open-Source API Testing Tool",
             "image": "/project_images/capisce.png",
-            "link": "https://capisce.buzl.uk/",
-            "address": "https://capisce.buzl.uk/"
+            "link": "https://github.com/kaangiray26/capisce",
+            "address": "https://github.com/kaangiray26/capisce"
         },
         {
             "name": "tracker.fm",

@@ -1,16 +1,36 @@
 <template>
-    <div class="container pt-4">
-        <div class="row gx-0">
-            <div class="col">
-                <div class="card rounded border-0 mx-4 pb-0">
-                    <div class="card-body d-flex flex-column align-items-center justify-content-between p-0">
+    <div class="row g-0 d-flex justify-content-center">
+        <div class="hide-on-mobile col col-6">
+            <div class="container pt-2 pb-2">
+                <div class="card rounded border-0 pb-0">
+                    <div class="card-body p-2 rounded">
                         <nav class="navbar flex-fill flex-nowrap w-100">
                             <div class="container-fluid px-0">
-                                <a href="https://buzl.uk">
-                                    <img class="bg-dark rounded" src="/assets/favicon.svg" width="38" height="38">
-                                </a>
+                                <router-link to="/" class="hover">
+                                    <img class="bg-nord4 rounded" src="/assets/logo.svg" width="38" height="38">
+                                </router-link>
                                 <div class="terminal-button btn-group">
-                                    <button class="btn btn-dark bi bi-terminal-fill text-nowrap m-0 p-0"
+                                    <button class="btn theme-btn bi bi-terminal-fill text-nowrap m-0 p-0 hover"
+                                        @click="emits('switchToTerminal')">
+                                    </button>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hide-on-desktop col col-12">
+            <div class="container pt-2 pb-2">
+                <div class="card rounded border-0 pb-0">
+                    <div class="card-body p-2 rounded">
+                        <nav class="navbar flex-fill flex-nowrap w-100">
+                            <div class="container-fluid px-0">
+                                <router-link to="/" class="hover">
+                                    <img class="bg-nord4 rounded" src="/assets/logo.svg" width="38" height="38">
+                                </router-link>
+                                <div class="terminal-button btn-group">
+                                    <button class="btn theme-btn bi bi-terminal-fill text-nowrap m-0 p-0 hover"
                                         @click="emits('switchToTerminal')">
                                     </button>
                                 </div>
@@ -27,28 +47,4 @@ import { ref, onMounted } from 'vue'
 
 const mode = ref("light");
 const emits = defineEmits(['switchToTerminal']);
-
-async function changeMode() {
-    if (mode.value == "light") {
-        document.getElementsByTagName("html")[0].setAttribute('data-bs-theme', 'dark')
-        mode.value = "dark";
-        localStorage.setItem("mode", "dark");
-
-    } else {
-        document.getElementsByTagName("html")[0].setAttribute('data-bs-theme', 'light')
-        mode.value = "light";
-        localStorage.setItem("mode", "light");
-    }
-}
-
-onMounted(() => {
-    let theme = localStorage.getItem('mode');
-    if (theme == "dark") {
-        mode.value = "dark";
-        document.getElementsByTagName("html")[0].setAttribute('data-bs-theme', 'dark');
-    } else {
-        mode.value = "light";
-        document.getElementsByTagName("html")[0].setAttribute('data-bs-theme', 'light')
-    }
-})
 </script>

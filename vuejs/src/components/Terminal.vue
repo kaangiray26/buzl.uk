@@ -1,15 +1,22 @@
 <template>
-    <div class="container pb-4">
-        <div class="card rounded border mx-4" @click="focusTerminal">
-            <div class="card-body border-0">
-                <div class="input-group mb-4" style="border-style: none;border-color: var(--background-color);">
-                    <span class="input-group-text font-monospace"
-                        style="background: var(--background-color);color: var(--text-general);border-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;border-left-style: none;">></span>
-                    <input ref="terminal_input" class="terminal_input font-monospace d-flex flex-fill" type="text"
-                        style="background: var(--background-color);color: var(--text-general);border-style: none;"
-                        autocomplete="off" @keyup.enter="evaluate" aria-label="Terminal Input" />
+    <div id="terminalModal" class="modal" tabindex="1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content theme-border">
+                <div class="modal-body theme-bg rounded">
+                    <div class="card rounded border">
+                        <div class="card-body border-0">
+                            <div class="input-group mb-4" style="border-style: none;border-color: var(--background-color);">
+                                <span class="input-group-text font-monospace"
+                                    style="background: var(--background-color);color: var(--text-general);border-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;border-left-style: none;">></span>
+                                <input ref="terminal_input" class="terminal_input font-monospace d-flex flex-fill"
+                                    type="text"
+                                    style="background: var(--background-color);color: var(--text-general);border-style: none;"
+                                    autocomplete="off" @keyup.enter="evaluate" aria-label="Terminal Input" />
+                            </div>
+                            <p ref="splash_text" class="color-nord4 mb-2" style="margin: 0px;"></p>
+                        </div>
+                    </div>
                 </div>
-                <p ref="splash_text" class="mb-2" style="margin: 0px;"></p>
             </div>
         </div>
     </div>
@@ -17,8 +24,10 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import { Modal } from 'bootstrap';
 import router from '/router';
 
+const modal = ref(null);
 const terminal_input = ref(null);
 const splash_text = ref(null);
 
@@ -51,15 +60,6 @@ function get_lines() {
         return data.text();
     });
     return response;
-}
-
-async function keyPress(event) {
-    if (event.ctrlKey && event.key == 'k') {
-        event.preventDefault();
-        window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
-        terminal_input.value.focus({ preventScroll: true });
-        return;
-    }
 }
 
 async function type(text) {
@@ -173,19 +173,24 @@ async function evaluate() {
     }
 }
 
-async function focusTerminal() {
-    terminal_input.value.focus({ preventScroll: true });
+function _show() {
+    modal.value.show();
+    terminal_input.value.focus();
+}
+function _hide() {
+    modal.value.hide();
 }
 
 defineExpose({
-    show: () => {
-        window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
-        terminal_input.value.focus({ preventScroll: true });
-    },
+    show: _show,
+    hide: _hide,
 })
 
 onMounted(() => {
-    document.addEventListener('keydown', keyPress);
+    modal.value = new Modal(document.querySelector('#terminalModal'));
+    window.addEventListener('lyrics', event => {
+        _get_lyrics(true);
+    });
     splashText();
 });
 </script>

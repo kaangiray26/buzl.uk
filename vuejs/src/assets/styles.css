@@ -1,4 +1,23 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
+
+:root {
+    --nord0: #2e3440;
+    --nord1: #3b4252;
+    --nord2: #434c5e;
+    --nord3: #4c566a;
+    --nord4: #d8dee9;
+    --nord5: #e5e9f0;
+    --nord6: #eceff4;
+    --nord7: #8fbcbb;
+    --nord8: #88c0d0;
+    --nord9: #81a1c1;
+    --nord10: #5e81ac;
+    --nord11: #bf616a;
+    --nord12: #d08770;
+    --nord13: #ebcb8b;
+    --nord14: #a3be8c;
+    --nord15: #b48ead;
+}
 
 #app {
     height: 100%;
@@ -12,11 +31,15 @@ html {
 body {
     height: 100%;
     margin: 0;
-    background-color: #1B1818;
-    color: #bdbdbd;
     font-family: IBM Plex Mono, Menlo, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier, monospace;
     font-weight: 400;
     line-height: 1.52;
+}
+
+.bg-img {
+    /* background-image: url("/assets/image.jpg");
+    background-size: cover; */
+    background-color: #d8dee9;
 }
 
 .vh-25 {
@@ -84,20 +107,11 @@ p {
     height: 38px;
 }
 
-.clickable {
-    cursor: pointer;
-}
-
-.clickable:hover {
-    opacity: 0.75;
-}
-
 .card {
     background-color: unset;
 }
 
 .card-heading {
-    color: #A8112E;
     font-family: 'JetBrains Mono', monospace;
 }
 
@@ -128,4 +142,74 @@ input:focus {
 .list-group-item {
     background-color: unset;
     color: #bdbdbd;
+}
+
+/* Themes */
+
+body.dark-theme {
+    --text-color: #eceff4;
+    --background-color: #2e3440;
+    --btn-background: #d8dee9;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover {
+    opacity: 0.75;
+}
+
+.clickable-shadow:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px var(--nord4);
+}
+
+.theme-bg {
+    background-color: var(--background-color);
+}
+
+.theme-bg-bright {
+    background-color: #3b4252;
+}
+
+.theme-color {
+    color: var(--text-color);
+}
+
+.bg-red {
+    background-color: #bf616a !important;
+}
+
+.color-red {
+    color: #bf616a;
+}
+
+.color-nord11 {
+    color: var(--nord11);
+}
+
+.color-nord4 {
+    color: var(--nord4);
+}
+
+.theme-btn {
+    color: #000 !important;
+    background-color: var(--nord4) !important;
+}
+
+.hover:hover {
+    opacity: 0.75;
+}
+
+.input-group {
+    color: var(--nord4) !important;
+}
+
+.bg-nord1 {
+    background-color: #3b4252;
+}
+
+.bg-nord4 {
+    background-color: var(--nord4) !important;
 }

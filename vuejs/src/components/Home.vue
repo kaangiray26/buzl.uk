@@ -1,11 +1,9 @@
 <template>
     <Welcome />
-    <DesktopView />
-    <MobileView />
+    <ProjectView />
 </template>
 
 <script setup>
 import Welcome from './Welcome.vue'
-import DesktopView from './DesktopView.vue'
-import MobileView from './MobileView.vue'
+import ProjectView from './ProjectView.vue'
 </script>
