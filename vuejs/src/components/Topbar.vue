@@ -6,19 +6,22 @@
     </div>
     <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="offcanvasExampleLabel">
         <ul class="sidebar list-group">
-            <li class="sidebar-item list-group-item rounded" @click="go_home">
+            <li class="sidebar-item list-group-item rounded" @click="go_home" data-bs-toggle="offcanvas"
+                data-bs-target="#sidebar">
                 <div class="d-flex">
                     <span class="bi bi-house pe-2"></span>
                     <span>Home</span>
                 </div>
             </li>
-            <li class="sidebar-item list-group-item rounded" @click="go_projects">
+            <li class="sidebar-item list-group-item rounded" @click="go_projects" data-bs-toggle="offcanvas"
+                data-bs-target="#sidebar">
                 <div class="d-flex">
                     <span class="bi bi-kanban pe-2"></span>
                     <span>Projects</span>
                 </div>
             </li>
-            <li class="sidebar-item list-group-item rounded" @click="go_contact">
+            <li class="sidebar-item list-group-item rounded" @click="go_contact" data-bs-toggle="offcanvas"
+                data-bs-target="#sidebar">
                 <div class="d-flex">
                     <span class="bi bi-person-circle pe-2"></span>
                     <span>Contact</span>
