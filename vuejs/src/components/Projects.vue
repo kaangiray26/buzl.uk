@@ -1,8 +1,8 @@
 <template>
     <div class="home d-flex flex-fill">
         <div class="filegrid row">
-            <div class="col flex-grow-0">
-                <File icon="/text-x-generic.svg" :index="0" name="Kaan Giray Buzluk" filename="kaangiraybuzluk.md"
+            <div v-for="(proj, index) in projs" class="col flex-grow-0">
+                <File icon="/x-office-document.svg" :index="index" :name="proj.name" :filename="proj.filename"
                     :event="event" />
             </div>
         </div>
@@ -12,11 +12,13 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import File from '/components/File.vue'
+import projects from '/assets/projects.json';
 
 const event = ref({
     "type": null,
     "details": null
 })
+const projs = ref(projects.items)
 
 onMounted(() => {
     window.addEventListener('click', (ev) => {
