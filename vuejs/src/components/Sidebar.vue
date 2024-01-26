@@ -23,13 +23,19 @@
                 <span>Contact</span>
             </div>
         </li>
-        <hr class="text-light">
-        <a href="https://github.com/kaangiray26" class="sidebar-item list-group-item rounded">
+        <hr class="text-light my-1">
+        <li class="sidebar-item list-group-item rounded" @click="go_github">
             <div class="d-flex">
                 <span class="bi bi-github pe-2"></span>
                 <span>GitHub</span>
             </div>
-        </a>
+        </li>
+        <!-- <a href="https://github.com/kaangiray26" class="sidebar-item list-group-item rounded">
+            <div class="d-flex">
+                <span class="bi bi-github pe-2"></span>
+                <span>GitHub</span>
+            </div>
+        </a> -->
     </ul>
 </template>
 
@@ -48,5 +54,9 @@ async function go_projects() {
 
 async function go_contact() {
     router.push("/contact")
+}
+
+async function go_github() {
+    router.push("/github")
 }
 </script>

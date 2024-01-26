@@ -78,7 +78,7 @@ body {
 
 .sidebar {
     height: 100%;
-    padding: 1rem;
+    padding: .25rem;
     background-color: #2A2A2A;
     border-radius: 0;
     user-select: none;
@@ -96,6 +96,11 @@ body {
 
 .home {
     background-color: #1E1E1E;
+    height: 100vh;
+}
+
+.home-light {
+    background-color: #FFFFFF;
     height: 100vh;
 }
 

@@ -1,6 +1,10 @@
 {
     "items": [
         {
+            "name": "Store",
+            "filename": "store.md"
+        },
+        {
             "name": "Nocturne",
             "filename": "nocturne.md"
         },
