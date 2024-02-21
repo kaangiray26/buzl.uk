@@ -1,40 +1,29 @@
-import { createRouter, createWebHistory } from "vue-router";
-import Home from "/components/Home.vue";
-import Subs from "/components/Subs.vue";
-import Contact from "/components/Contact.vue";
+import { createRouter, createWebHistory } from 'vue-router';
+import Home from '../components/Home.vue';
+import Gallery from '../components/Gallery.vue';
+import Contact from '../components/Contact.vue';
 
 const routes = [
     {
         path: "/",
-        component: Home,
-        meta: {
-            title: 'buzl.uk'
-        }
+        component: Home
     },
     {
-        path: "/subs",
-        component: Subs,
-        meta: {
-            title: 'buzl.uk | Subs'
-        }
+        path: "/gallery",
+        component: Gallery
     },
     {
         path: "/contact",
-        component: Contact,
-        meta: {
-            title: 'buzl.uk | Contact'
-        }
+        component: Contact
     }
 ];
 
 const router = createRouter({
     history: createWebHistory(),
-    routes
-});
-
-router.beforeEach((to, from, next) => {
-    document.title = to.meta.title;
-    next();
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+        return { top: 0 }
+    }
 });
 
 export default router

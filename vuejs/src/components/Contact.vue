@@ -1,31 +1,22 @@
 <template>
-    <div class="container pb-4">
-        <div class="card rounded border-0">
-            <div class="card-body px-0">
-                <h1 class="card-heading">Contact</h1>
-                <h6 class="text-muted card-subtitle mb-2">~</h6>
-                <div class="d-inline-flex position-relative overflow-hidden ratio-1x1 mb-4">
-                    <img class="rounded img-fluid" src="/assets/me.jpg"
-                        alt="Computer science student, writer, hobbyist, whatever..." height="240" width="240">
-                    <div class="position-absolute right-0 bottom-0">
-                        <img class="live-button m-2" src="/assets/favicon.svg" width="32p" height="32px" alt="Favicon">
-                    </div>
-                </div>
-                <div class="d-flex">
-                    <a class="contact-item fs-3 rounded border d-flex align-items-center p-2 mx-1 bi bi-github"
-                        href="https://github.com/kaangiray26" target="_blank">
-                    </a>
-                    <a class="contact-item fs-3 rounded border d-flex align-items-center p-2 mx-1 bi bi-linkedin"
-                        href="https://www.linkedin.com/in/kaangiray26/" target="_blank">
-                    </a>
-                    <a class="contact-item fs-3 rounded border d-flex align-items-center p-2 mx-1 bi bi-envelope-fill"
-                        href="mailto: kaangiray26@protonmail.com" target="_blank">
-                    </a>
-                </div>
-            </div>
-        </div>
+    <div>
+        <h2 id="contact">contact</h2>
+        <p>You can reach me via <a href="mailto:kaan.giray.buzluk@rwth-aachen.de"><strong>email</strong></a>. You
+            can also find me on <a href="https://github.com/kaangiray26"><strong>github</strong></a> and <a
+                href="https://www.linkedin.com/in/kaangiray26/"><strong>linkedin</strong></a>.
+        </p>
+        <h2 id="want-to-talk-in-private">want to talk in private?</h2>
+        <p>Use my PGP public key to send me encrypted messages. You can download it <a
+                href="https://keys.openpgp.org/vks/v1/by-fingerprint/540F917D4C350112D6B180B5F7F01DE9D67AF192"><strong>here</strong></a>.
+        </p>
     </div>
 </template>
-
-<script setup>
-</script>
+<style>
+pre {
+    display: flex;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    overflow-x: auto;
+}
+</style>
