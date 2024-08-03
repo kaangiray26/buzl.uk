@@ -8,11 +8,11 @@
     "deploy": "sh deploy.sh"
   },
   "dependencies": {
-    "vue": "^3.4.19",
-    "vue-router": "^4.3.0"
+    "vue": "^3.4.35",
+    "vue-router": "^4.4.2"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.4",
-    "vite": "^5.1.4"
+    "@vitejs/plugin-vue": "^5.1.2",
+    "vite": "^5.3.5"
   }
 }
