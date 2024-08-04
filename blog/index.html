@@ -1,0 +1,31 @@
+---
+layout: default
+title: buzl.uk | Blog
+---
+
+<h2>blog</h2>
+<p>Here are some of my recent posts:</p>
+<!-- This loops through the paginated posts -->
+<ol>
+    {% for post in paginator.posts %}
+    <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <br />
+        <small>{{ post.date | date_to_string }}</small>
+    </li>
+    {% endfor %}
+</ol>
+
+<!-- Pagination links -->
+<p>
+    <span> Page: {{ paginator.page }} of {{ paginator.total_pages }} </span>
+    <br />
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="pagination-link">
+        « Previous
+    </a>
+    <span>|</span>
+    {% endif %} {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="pagination-link">Next »</a>
+    {% endif %}
+</p>

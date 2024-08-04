@@ -6,7 +6,7 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=5"
         />
-        <title>Buzl.uk</title>
+        <title>{{ page.title }}</title>
         <link rel="canonical" href="https://www.buzl.uk/" />
         <meta name="title" content="Buzl.uk" />
         <meta name="description" content="kaangiray26's personal website" />
@@ -36,12 +36,26 @@
             content="https://kaangiray26.github.io/images/buzluk.png"
         />
 
-        <link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg" />
+        <link
+            rel="shortcut icon"
+            type="image/svg+xml"
+            href="/assets/favicon.svg"
+        />
+        <link rel="stylesheet" href="/assets/styles.css" />
+        <script src="/assets/scripts.js"></script>
     </head>
 
     <body class="home">
-        <div id="app"></div>
-        <script type="module" src="/js/main.js"></script>
+        <header>
+            <a class="title" href="/">
+                <h1>buzl.uk</h1>
+            </a>
+            {% include navigation.html %}
+        </header>
+        <main>{{ content }}</main>
+        <footer style="padding: 25px 0">
+            <span> Support <a href="https://bearblog.dev">Bear ʕ•ᴥ•ʔ</a> </span>
+        </footer>
         <script defer>
             (function () {
                 window.addEventListener("DOMContentLoaded", () => {
