@@ -1,5 +1,4 @@
 url: https://www.buzl.uk
-baseurl: /
 incremental: false
 paginate: 30
 plugins:
