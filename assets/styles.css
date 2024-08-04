@@ -17,6 +17,11 @@
     --blockquote-color: #222;
 }
 
+::selection {
+    color: white;
+    background-color: var(--code-color);
+}
+
 body {
     font-family: var(--font-secondary);
     font-size: var(--font-scale);
@@ -168,7 +173,7 @@ pre {
 
 mark {
     background-color: unset;
-    border: 3px solid var(--main-color);
+    border-left: 3px solid var(--main-color);
     padding: 0 3px;
 }
 
@@ -226,8 +231,19 @@ form input[type="text"] {
     text-decoration: none;
     border: unset;
 }
+
 .pagination-link:hover {
     background-color: unset;
     text-decoration: none;
     border-bottom: 3px solid var(--main-color);
+}
+
+.tag {
+    color: black !important;
+    background-color: #f2f2f2 !important;
+    border: unset;
+}
+
+.tag:hover {
+    border-bottom: 3px solid #ff0000;
 }

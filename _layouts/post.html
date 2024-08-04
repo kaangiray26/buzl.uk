@@ -4,5 +4,12 @@ layout: default
 
 <h2>{{ page.title }}</h2>
 <mark>{{ page.date | date_to_string }} - {{ page.author }}</mark>
-
-{{ content }}
+<!-- Include tags here -->
+{% if page.tags %}
+<br />
+<p>
+    {% for tag in page.tags %}
+    <a href="/search.html?q={{ tag }}" class="tag">#{{ tag }}</a>
+    {% endfor %}
+</p>
+{% endif %} {{ content }}
