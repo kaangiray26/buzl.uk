@@ -42,10 +42,19 @@
     <body class="home">
         <div id="app"></div>
         <script type="module" src="/js/main.js"></script>
-        <script
-            defer
-            data-addr="https://home.buzl.uk:8443/analytics/beacon"
-            src="assets/beacon.js"
-        ></script>
+        <script defer>
+            (function () {
+                window.addEventListener("DOMContentLoaded", () => {
+                    fetch("https://home.buzl.uk:8443/analytics/beacon", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            origin: window.location.origin,
+                            path: window.location.pathname,
+                        }),
+                    });
+                });
+            })();
+        </script>
     </body>
 </html>

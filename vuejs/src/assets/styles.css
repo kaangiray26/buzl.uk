@@ -1,12 +1,11 @@
 /* Bearblog theme */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 :root {
     --width: 720px;
-    --font-main: 'Roboto Mono', monospace;
-    --font-secondary: 'Roboto Mono', monospace;
-    --font-scale: .9em;
+    --font-main: "Roboto Mono", monospace;
+    --font-secondary: "Roboto Mono", monospace;
+    --font-scale: 0.9em;
     --background-color: #fff;
     --heading-color: #232333;
     --text-color: #232333;
@@ -51,9 +50,13 @@ a {
 }
 
 a:hover {
-    background-color: var(--main-color);
     color: white;
     text-decoration: none;
+    background-color: var(--main-color);
+}
+
+a:hover > strong {
+    color: white;
 }
 
 header {
@@ -62,13 +65,17 @@ header {
     border-bottom: 3px dotted #232333;
 }
 
-nav a {
-    margin-right: 8px;
+nav a + a {
+    margin-left: 16px;
 }
 
 strong,
 b {
     color: var(--heading-color);
+}
+
+p {
+    color: #7f8387;
 }
 
 button {
@@ -157,7 +164,6 @@ i time {
 ul.blog-posts li span {
     flex: 0 0 130px;
 }
-
 
 ul.blog-posts li a:visited {
     color: var(--visited-color);

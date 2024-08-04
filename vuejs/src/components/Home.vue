@@ -12,8 +12,25 @@
         <p>Here is a list of my latest projects:</p>
         <ul>
             <li>
+                <a href="https://github.com/kaangiray26/ripples">ripples </a>
+                - WebRTC Client for Ripples
+            </li>
+            <li>
+                <a href="https://kaangiray26.github.io/deep-thought/"
+                    >deeep-thought</a
+                >
+                - An internet puzzle game
+            </li>
+            <li>
                 <a href="https://github.com/kaangiray26/analytics">Analytics</a>
                 - Simple, open-source web analytics alternative
+            </li>
+            <li>
+                <a href="https://github.com/kaangiray26/jekyll-template"
+                    >jekyll-template</a
+                >
+                - Use this template to create a simple Jekyll site for your
+                project
             </li>
             <li>
                 <a href="https://github.com/kaangiray26/messenger">Messenger</a>
@@ -166,8 +183,25 @@
         </ul>
         <h2 id="what-else">what else?</h2>
         <p>
-            You can also check out my photographs in the
-            <router-link to="/gallery">gallery</router-link>.
+            I love analog photography, and I have a collection of nice pictures
+            I've taken. You can check them out in the
+            <router-link to="/gallery">gallery 🖼️</router-link>.
+        </p>
+        <p>
+            Since July 2023, a little script has been running on a server,
+            recording the songs played on Radyo Eksen. You can find them as
+            playlists in my
+            <a
+                href="https://open.spotify.com/user/31v5bbakuh7445bhsw7cqknesad4/playlists"
+                >Spotify profile 🎸</a
+            >. They are updated daily and contain some amazing songs that you
+            may not have heard before.
+        </p>
+        <p>
+            There is also a page where I share
+            <a href="https://kaangiray26.github.io/works/"
+                >some of my poems 📝</a
+            >. Feel free to check it out at
         </p>
     </div>
 </template>
