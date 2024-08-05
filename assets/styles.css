@@ -186,6 +186,12 @@ form input[type="text"] {
     margin-right: 8px;
 }
 
+iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
 .title:hover {
     text-decoration: none;
 }

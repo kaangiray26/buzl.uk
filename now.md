@@ -14,6 +14,7 @@ Here's what I'm up to right now:
 - Furiosa: A Mad Max Saga (left after 30 minutes)
 
 **Bands I'm listening to a lot lately**
+- The Black Noodle Project ⭐
 - Camel
 - Opeth
 - Mor ve Ötesi

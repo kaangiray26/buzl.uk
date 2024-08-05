@@ -2,6 +2,7 @@
 layout: post
 title: migrating my website
 author: kaangiray26
+tags: [jekyll, github pages, bear blog]
 ---
 That time of the year has come again. I need to change my website, add some silly features, and remove some necessary ones. Until now, I was using Vue.js and GitHub Pages to build and host my website. But it was too exhausting to maintain the website and write new posts because I needed to build the website myself every time I make a change in the code. Besides, I had to deal with HTML and this prevented me from writing new posts frequently. So, I decided to migrate my website to Jekyll as, I can't stress this enough, I **LOVE 😍** writing in Markdown. If god wanted to send some sacred text to the earth in the 21st century, he would definitely choose Markdown. Anyway, let's see how it went.
 

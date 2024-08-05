@@ -1,5 +1,6 @@
 url: https://www.buzl.uk
 incremental: false
+timezone: Europe/Berlin
 paginate: 30
 plugins:
     - jekyll-paginate
