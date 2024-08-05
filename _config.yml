@@ -5,3 +5,4 @@ paginate: 30
 plugins:
     - jekyll-paginate
 paginate_path: "/blog/page:num/"
+exclude: ["README.md", "jekyll"]
