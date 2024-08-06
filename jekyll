@@ -27,7 +27,7 @@ fi
 # Serve
 if [ "$1" == "serve" ]; then
     echo "Serving the site with docker image..."
-    docker run --rm --volume="$PWD:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll sh -c "bundle add webrick ; echo '==> ignoring any errors ʅʕ•ᴥ•ʔʃ' ; bundle install ; jekyll serve --livereload --watch"
+    docker run --rm --volume="$PWD:/srv/jekyll" -p 4000:4000 -p 3000:3000 -it jekyll/jekyll sh -c "bundle add webrick ; echo '==> ignoring any errors ʅʕ•ᴥ•ʔʃ' ; bundle install ; jekyll serve --livereload --watch --drafts --livereload-port 3000"
 fi
 
 # Deploy

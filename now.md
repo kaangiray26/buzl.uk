@@ -5,16 +5,17 @@ title: buzl.uk | Now
 ## now
 Here's what I'm up to right now:
 
-**Reading**
+### Reading
 - The Shadow of the Torturer by Gene Wolfe
 - ~~No Longer Human by Osamu Dazai~~
 
-**Recently watched**
+### Recently watched
 - Watchmen - The Ultimate Cut (again..)
 - Furiosa: A Mad Max Saga (left after 30 minutes)
 
-**Bands I'm listening to a lot lately**
+### Artists I'm listening to a lot lately
 - The Black Noodle Project ⭐
+- Interpol and Paul Banks
 - Camel
 - Opeth
 - Mor ve Ötesi
@@ -22,5 +23,5 @@ Here's what I'm up to right now:
 
 You can also check out my [last.fm 🎶](https://www.last.fm/user/kaangiray26) profile for more music.
 
-**Working on**
+### Working on
 - [www.unidate.me](https://www.unidate.me/)
