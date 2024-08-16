@@ -259,3 +259,33 @@ iframe {
 .tag:hover {
     border-bottom: 3px solid #ff0000;
 }
+
+<style > spinner::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+    aspect-ratio: 1 !important;
+    content: "progress_activity";
+    font-family: "Material Symbols Outlined";
+    animation: spin 1s linear infinite;
+}
+
+spinner[icon]::after {
+    content: attr(icon);
+}
+
+spinner[reverse]::after {
+    animation-direction: reverse;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
