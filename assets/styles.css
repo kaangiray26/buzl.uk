@@ -1,5 +1,6 @@
 /* Bearblog theme */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0");
 
 :root {
     --width: 720px;
@@ -112,6 +113,7 @@ code {
     background-color: var(--code-background-color);
     color: var(--code-color);
     border-radius: 3px;
+    user-select: all;
 }
 
 blockquote {
@@ -169,6 +171,7 @@ pre {
     padding: 1rem;
     border-radius: 0.375rem;
     overflow-x: auto;
+    user-select: all;
 }
 
 mark {

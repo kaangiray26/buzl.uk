@@ -46,6 +46,6 @@ Here is a list of my latest projects:
 ## what else?
 I love analog photography, and I have a collection of nice pictures I've taken. You can check them out in the [gallery 🖼️](/gallery).
 
-Since July 2023, a little script has been running on a server, recording the songs played on Radyo Eksen. You can find them as playlists in my [Spotify profile 🎸](https://open.spotify.com/user/31v5bbakuh7445bhsw7cqknesad4/playlists). They are updated daily and contain some amazing songs that you may not have heard before.
+Since July 2023, a little script has been running on a server, recording the songs played on Radyo Eksen. You can find them as playlists in my other [Spotify profile 🎸](https://open.spotify.com/user/31qj2r3xdqqyvtoprsqa5sksrkva). They are updated daily and contain some amazing songs that you may not have heard before.
 
 There is also a page where I share [some of my poems 📝](https://kaangiray26.github.io/works/). Feel free to check them out.
