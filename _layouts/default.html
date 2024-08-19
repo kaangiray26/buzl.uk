@@ -45,30 +45,12 @@
         <script src="/assets/scripts.js"></script>
     </head>
 
-    <body class="home">
-        <header>
-            <a class="title" href="/">
-                <h1>buzl.uk</h1>
-            </a>
-            {% include navigation.html %}
-        </header>
+    <body>
+        {% include header.html %}
         <main>{{ content }}</main>
-        <footer style="padding: 25px 0">
-            <span> Support <a href="https://bearblog.dev">Bear ʕ•ᴥ•ʔ</a> </span>
+        <footer>
+            <!-- <a href="https://bearblog.dev">ʕ•ᴥ•ʔ</a> -->
+            {% include neko.html %}
         </footer>
-        <script defer>
-            (function () {
-                window.addEventListener("DOMContentLoaded", () => {
-                    fetch("https://home.buzl.uk:8443/analytics/beacon", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({
-                            origin: window.location.origin,
-                            path: window.location.pathname,
-                        }),
-                    });
-                });
-            })();
-        </script>
     </body>
 </html>

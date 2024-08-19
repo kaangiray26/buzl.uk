@@ -21,7 +21,7 @@ Here's what I'm up to right now:
 - Mor ve Ötesi
 - Redd
 
-You can also check out my [last.fm 🎶](https://www.last.fm/user/kaangiray26) profile for more music.
+You can also check out my [last.fm](https://www.last.fm/user/kaangiray26) profile for more music.
 
 ### Working on
 - [www.unidate.me](https://www.unidate.me/)

@@ -45,16 +45,11 @@
         <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
     </head>
 
-    <body class="home">
-        <header>
-            <a class="title" href="/">
-                <h1>buzl.uk</h1>
-            </a>
-            {% include navigation.html %}
-        </header>
+    <body>
+        {% include header.html %}
         <main>{{ content }}</main>
-        <footer style="padding: 25px 0">
-            <span> Support <a href="https://bearblog.dev">Bear ʕ•ᴥ•ʔ</a> </span>
+        <footer>
+            <a href="https://bearblog.dev">ʕ•ᴥ•ʔ</a>
         </footer>
         <script defer src="/assets/search.js"></script>
     </body>

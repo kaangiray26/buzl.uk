@@ -6,7 +6,16 @@ title: buzl.uk | Blog
 <h2>blog</h2>
 <p>Here are some of my recent posts:</p>
 <!-- This loops through the paginated posts -->
-<ol>
+<div class="blog-posts">
+    {% for post in paginator.posts %}
+    <a href="{{ post.url }}" class="blog-post">
+        <p>{{ post.title }}</p>
+        <hr />
+        <span class="date">{{ post.date | date_to_string }}</span>
+    </a>
+    {% endfor %}
+</div>
+<!-- <ul>
     {% for post in paginator.posts %}
     <li>
         <a href="{{ post.url }}">{{ post.title }}</a>
@@ -14,7 +23,7 @@ title: buzl.uk | Blog
         <small>{{ post.date | date_to_string }}</small>
     </li>
     {% endfor %}
-</ol>
+</ul> -->
 
 <!-- Pagination links -->
 <p>
