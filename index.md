@@ -2,11 +2,13 @@
 layout: default
 title: buzl.uk
 ---
-## who am i?
+## about me
+<section markdown=1>
 My name is <abbr title="kaangiray26">Kaan Giray Buzluk</abbr> and I'm an open-source software developer. That means I work on software projects that are free to use, modify, and distribute. Why? Because I believe knowledge should be free and open to everyone. I'm also studying computer science at the RWTH Aachen University in Germany.
+</section>
 
-## what do i do?
-Here is a list of my latest projects:
+## latest projects
+<section markdown=1>
 1. [Mezzo](https://github.com/kaangiray26/mezzo) - A simple, open-source music player
 2. [ripples](https://github.com/kaangiray26/ripples) - WebRTC Client for Ripples
 3. [deeep-thought](https://kaangiray26.github.io/deep-thought/) - An internet puzzle game
@@ -43,10 +45,13 @@ Here is a list of my latest projects:
 34. [tunein-cli](https://github.com/kaangiray26/tunein-cli) - Browse and listen to TuneIn stations from the command line
 35. [pitch-perfect](https://github.com/kaangiray26/pitch-perfect) - One Time Pad Implementation with a GUI
 36. [drifter](https://github.com/kaangiray26/drifter-gtk) - Another GTK Client for Reddit
+</section>
 
-## what else?
+## other stuff
+<section markdown=1>
 I love analog photography, and I have a collection of nice pictures I've taken. You can check them out in the [gallery](/gallery).
 
 Since July 2023, a little script has been running on a server, recording the songs played on Radyo Eksen. You can find them as playlists in my other [Spotify profile](https://open.spotify.com/user/31qj2r3xdqqyvtoprsqa5sksrkva). They are updated daily and contain some amazing songs that you may not have heard before.
 
 There is also a page where I share [some of my poems](https://kaangiray26.github.io/works/). Feel free to check them out.
+</section>

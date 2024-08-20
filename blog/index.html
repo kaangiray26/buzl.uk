@@ -3,28 +3,18 @@ layout: default
 title: buzl.uk | Blog
 ---
 
-<h2>blog</h2>
-<p>Here are some of my recent posts:</p>
+<h2>All Posts</h2>
 <!-- This loops through the paginated posts -->
-<div class="blog-posts">
-    {% for post in paginator.posts %}
-    <a href="{{ post.url }}" class="blog-post">
-        <p>{{ post.title }}</p>
-        <hr />
-        <span class="date">{{ post.date | date_to_string }}</span>
-    </a>
-    {% endfor %}
-</div>
-<!-- <ul>
-    {% for post in paginator.posts %}
-    <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <br />
-        <small>{{ post.date | date_to_string }}</small>
-    </li>
-    {% endfor %}
-</ul> -->
-
+<section>
+    <ul class="blog-list">
+        {% for post in paginator.posts %}
+        <li class="blog-item">
+            <time>{{ post.date | date_to_string }}</time>
+            <a href="{{ post.url }}" class="blog-post">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
 <!-- Pagination links -->
 <p>
     <span> Page: {{ paginator.page }} of {{ paginator.total_pages }} </span>

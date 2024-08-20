@@ -3,9 +3,11 @@ layout: default
 title: buzl.uk | Gallery
 ---
 ## gallery
+<section markdown=1>
 These are some of my favourite photographs. All of them are free to use. Attribution is not required. However, it is always appreciated. Also, don't use them for commercial purposes.
 
 **Images displayed here are dithered to reduce the file size. Click on the image to toggle dithering.**
+</section>
 
 {% for image in site.data.images %}
 <div class="img-container" onclick="toggle_dithering(this)">

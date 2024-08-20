@@ -27,19 +27,19 @@ async function get_results() {
         let li = document.createElement("li");
         let a = document.createElement("a");
         let br = document.createElement("br");
-        let small = document.createElement("small");
+        let time = document.createElement("time");
         let p = document.createElement("p");
 
         // Set data
         a.href = res.item.url;
         a.textContent = res.item.title;
-        small.textContent = res.item.date;
+        time.textContent = `Published on ${res.item.date}`;
         p.textContent = res.item.excerpt;
 
         // Append elements
         li.appendChild(a);
         li.appendChild(br);
-        li.appendChild(small);
+        li.appendChild(time);
         li.appendChild(p);
 
         // Append to ul
