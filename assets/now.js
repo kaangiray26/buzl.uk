@@ -26,7 +26,7 @@ async function get_recent_tracks() {
 
     // Parse tracks to HTML
     let html = response.recenttracks.track.map((track) => {
-        return `<li><img src="${track.image[3]["#text"]}" alt="${track.name} by ${track.artist["#text"]}"><a href="${track.url}">${track.name} by ${track.artist["#text"]}</a></li>`;
+        return `<li><img src="${track.image[3]["#text"]}" alt="${track.name} by ${track.artist["#text"]}"><a href="${track.url}">${track.name}</a><span>${track.artist["#text"]}</span></li>`;
     });
 
     // Load the template

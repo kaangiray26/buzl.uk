@@ -154,9 +154,10 @@ ol {
 }
 
 footer {
-    text-align: center;
+    font-size: small;
     padding: 0;
     margin-top: 1rem;
+    text-align: center;
 }
 
 mark {
@@ -360,12 +361,12 @@ spinner[reverse]::after {
 
 #last-songs li {
     display: grid;
-    grid-template-columns: 64px 1fr;
+    grid-template-columns: 64px 1fr auto;
     gap: 0.5rem;
-    align-items: center;
+    align-items: end;
 }
 
-#last-songs #last-songs img {
+#last-songs img {
     width: 64px;
     height: 64px;
     border-radius: unset;
