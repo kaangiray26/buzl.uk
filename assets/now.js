@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 async function get_now() {
     // Get top artists from last.fm
     let response = await fetch(
-        "http://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=kaangiray26&period=7day&limit=5&api_key=a71442723a9101d641ecb76a6bd077b3&format=json",
+        "https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=kaangiray26&period=7day&limit=5&api_key=a71442723a9101d641ecb76a6bd077b3&format=json",
     ).then((res) => res.json());
 
     // Parse artists to HTML
@@ -21,7 +21,7 @@ async function get_now() {
 async function get_recent_tracks() {
     // Get top artists from last.fm
     let response = await fetch(
-        "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=kaangiray26&limit=5&api_key=a71442723a9101d641ecb76a6bd077b3&format=json",
+        "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=kaangiray26&limit=5&api_key=a71442723a9101d641ecb76a6bd077b3&format=json",
     ).then((res) => res.json());
 
     // Parse tracks to HTML
