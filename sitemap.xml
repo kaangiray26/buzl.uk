@@ -17,7 +17,7 @@ search: exclude
 
     {% for post in site.posts %}
     <url>
-        <loc>{{post.url}}</loc>
+        <loc>{{site.url}}{{post.url}}</loc>
         <lastmod>{{site.time | date: '%Y-%m-%d' }}</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
