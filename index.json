@@ -1,10 +1,12 @@
 ---
+layout: null
+search: exclude
 ---
 [
     {% for post in site.posts %}
     {
         "title"    : "{{ post.title }}",
-        "url"      : "{{ site.baseurl }}{{ post.url }}",
+        "url"      : "{{ page.url | prepend: site.url }}",
         "date"     : "{{ post.date | date_to_string }}",
         "excerpt" : "{{ post.excerpt | strip_newlines | strip_html | strip | escape }}",
         "tags": [
