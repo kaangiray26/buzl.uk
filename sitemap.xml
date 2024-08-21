@@ -8,8 +8,8 @@ search: exclude
 
     {% for page in site.pages %}
     <url>
-        <loc>{{site.url}}{{page.url}}</loc>
-        <lastmod>{{site.time | date: '%Y-%m-%d' }}</lastmod>
+        <loc>{{ page.url | prepend: site.url }}</loc>
+        <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
@@ -17,8 +17,8 @@ search: exclude
 
     {% for post in site.posts %}
     <url>
-        <loc>{{site.url}}{{post.url}}</loc>
-        <lastmod>{{site.time | date: '%Y-%m-%d' }}</lastmod>
+        <loc>{{ post.url | prepend: site.url }}</loc>
+        <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.5</priority>
     </url>
