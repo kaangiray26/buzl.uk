@@ -176,10 +176,10 @@ img {
 pre {
     color: black;
     background-color: #eceff4;
-    font-family: "Comic Mono", monospace;
     padding: 1rem;
     border-radius: 0.375rem;
     overflow-x: auto;
+    font-family: "Liberation Mono", monospace;
 }
 
 pre > code {
@@ -195,9 +195,9 @@ pre > code {
 code {
     color: black;
     background-color: #eceff4;
-    font-family: "Comic Mono", monospace;
     text-wrap: nowrap;
     user-select: all;
+    font-family: "Liberation Mono", monospace;
 }
 
 iframe {
