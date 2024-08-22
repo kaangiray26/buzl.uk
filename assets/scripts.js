@@ -28,32 +28,3 @@ async function toggle_dithering(item) {
 async function scroll_to_top() {
     window.scrollTo({ top: 0, behavior: "smooth" });
 }
-
-async function search() {
-    var documents = [
-        {
-            name: "Lunr",
-            text: "Like Solr, but much smaller, and not as bright.",
-        },
-        {
-            name: "React",
-            text: "A JavaScript library for building user interfaces.",
-        },
-        {
-            name: "Lodash",
-            text: "A modern JavaScript utility library delivering modularity, performance & extras.",
-        },
-    ];
-
-    var idx = lunr(function () {
-        this.ref("name");
-        this.field("text");
-
-        documents.forEach(function (doc) {
-            this.add(doc);
-        }, this);
-    });
-
-    var results = idx.search("bright");
-    console.log("Results:", results);
-}
