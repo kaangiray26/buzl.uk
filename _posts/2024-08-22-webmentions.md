@@ -7,7 +7,7 @@ tags: [indieweb, webmentions, jekyll, blog]
 
 Testing webmentions for the first time. This post will send a webmention to [another post](https://www.buzl.uk/2024/08/21/pyright.html) on my blog. Let's see if it works.
 
-Edit: It worked! I can see the webmention on my other post. Okay, let's go over how I set this up and how you can do it too.
+**Edit:** It worked! I can see the webmention on my other post. Okay, let's go over how I set this up and how you can do it too.
 
 ### First, what are webmentions?
 Webmention is another web standard recommendation from [W3C](https://www.w3.org/TR/webmention/), that was written by the [IndieWeb](https://indieweb.org/Webmention) community. Basically, it describes a way for website owners to notify each other when they link each other's content on their posts. With Webmention, you can leave comments, likes, reposts, and other interactions on other people's websites, especially if you use [microformats](https://indieweb.org/microformats) with it.
