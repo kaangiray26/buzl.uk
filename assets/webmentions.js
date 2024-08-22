@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     ).then((res) => res.json());
 
     // Parse the response
-    console.log(response);
     if (!response.children.length) return;
 
     // Create a list of webmentions
@@ -41,7 +40,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // Get the mention details
         let url = mention.url;
-        let date = format_date(mention.published);
+        let date = format_date(mention["wm-received"]);
 
         // Get author details
         let author = mention.author.name
