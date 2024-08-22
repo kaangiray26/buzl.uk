@@ -36,7 +36,7 @@ However, we also need to save the webmentions we sent to avoid processing the sa
 
 For the actual processing part, we have a Python script that does the job. I'm not going to go into the details but it just makes some HTTP requests and parses the HTML with [lxml](https://lxml.de/). It's not perfect but it does the job for now.
 
-I've added the files to a new repository, which you can check out [here](https://github.com/kaangiray26/webmention) if you want to adapt it to your own blog.
+I've added the files to a new repository, which you can check out [here](https://github.com/kaangiray26/webmention) if you want to adapt it to your own blog. My blog's source code is also available [here](https://github.com/kaangiray26/buzl.uk) if you want to see how I implemented the parts I mentioned above and below.
 
 If you want to use this setup, here are the steps you need to follow:
 
