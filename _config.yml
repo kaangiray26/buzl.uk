@@ -1,11 +1,24 @@
 title: buzl.uk
 url: https://www.buzl.uk
+author: kaangiray26
 canonical: https://www.buzl.uk
-description: kaangiray26's personal website
+description: kaangiray26's blog about software development, technology, qualities in life and more
 incremental: false
 timezone: Europe/Berlin
 paginate: 30
 plugins:
     - jekyll-paginate
+    - jekyll-seo-tag
 paginate_path: "/blog/page:num/"
 exclude: ["README.md", "jekyll", "LICENSE"]
+twitter:
+    username: kaangiray26
+    card: summary
+logo: /assets/favicon.svg
+social:
+    name: kaangiray26
+    links:
+        - https://twitter.com/kaangiray26
+        - https://github.com/kaangiray26
+        - https://www.linkedin.com/in/kaangiray26
+        - https://keybase.io/kaangiray26
