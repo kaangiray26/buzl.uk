@@ -238,6 +238,47 @@ audio {
     border-radius: 0.375rem;
 }
 
+webmentions {
+    display: none;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 0.375rem;
+}
+
+webmentions h3 {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+webmentions ul {
+    display: grid;
+    gap: 0.5rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+webmentions li {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 0.5rem;
+}
+
+webmentions img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 0;
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+}
+
+webmentions time {
+    display: block;
+    min-width: 9.5ch;
+    text-wrap: nowrap;
+}
+
 .frontmatter {
     display: flex;
     align-items: center;
