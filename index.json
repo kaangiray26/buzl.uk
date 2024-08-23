@@ -6,7 +6,7 @@ search: exclude
     {% for post in site.posts %}
     {
         "title"    : "{{ post.title }}",
-        "url"      : "{{ page.url | prepend: site.url }}",
+        "url"      : "{{ post.url | prepend: site.url }}",
         "date"     : "{{ post.date | date_to_string }}",
         "excerpt" : "{{ post.excerpt | strip_newlines | strip_html | strip | escape }}",
         "tags": [
