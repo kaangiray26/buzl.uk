@@ -197,6 +197,7 @@ pre > code {
     color: inherit;
     background-color: initial;
     padding: 0;
+    border: none;
     border-radius: 0;
     font-size: unset;
     padding-inline-end: 1rem;
@@ -208,6 +209,7 @@ code {
     background-color: #eceff4;
     text-wrap: nowrap;
     user-select: all;
+    border: 1px solid var(--border-color);
     font-family: "Liberation Mono", monospace;
 }
 
