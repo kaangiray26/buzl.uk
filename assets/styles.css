@@ -240,6 +240,10 @@ audio {
     border-radius: 0.375rem;
 }
 
+time {
+    text-decoration: underline;
+}
+
 webmentions {
     display: none;
     background-color: white;
@@ -279,6 +283,7 @@ webmentions time {
     display: block;
     min-width: 9.5ch;
     text-wrap: nowrap;
+    text-decoration: none;
 }
 
 .frontmatter {
@@ -390,6 +395,7 @@ spinner[reverse]::after {
     display: block;
     min-width: 9.5ch;
     text-wrap: nowrap;
+    text-decoration: none;
 }
 
 #top-artists:empty::after {
@@ -483,4 +489,10 @@ terminal > button {
 
 terminal > button:hover {
     background-color: #f0f0f0;
+}
+
+.img-inline {
+    display: inline-block;
+    border-radius: unset;
+    box-shadow: none;
 }

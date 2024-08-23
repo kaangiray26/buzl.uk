@@ -27,7 +27,7 @@ function format_date(dt) {
 document.addEventListener("DOMContentLoaded", async () => {
     const webmentions = document.querySelector("webmentions");
     const response = await fetch(
-        `https://webmention.io/api/mentions.jf2?target=${window.location.href}`,
+        `https://webmention.io/api/mentions.jf2?target=https://www.buzl.uk${window.location.pathname}`,
     ).then((res) => res.json());
 
     // Parse the response
