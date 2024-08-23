@@ -6,7 +6,7 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=5"
         />
-        <title>{{ page.title }}</title>
+        <title>404 not found!</title>
         <link rel="canonical" href="https://www.buzl.uk/" />
         <!-- If you're wondering about what buzluk means, it's just my surname and it literally means "freezer" in Turkish, lol. -->
         <meta name="title" content="buzl.uk" />
@@ -50,8 +50,8 @@
         <link
             rel="alternate"
             type="application/rss+xml"
-            href="{{ site.url }}/feed.xml"
-            title="{{ site.title }}"
+            href="https://www.buzl.uk/feed.xml"
+            title="buzl.uk"
         />
         <!-- These are my social profiles: -->
         <link href="https://github.com/kaangiray26" rel="me" />
@@ -61,12 +61,9 @@
             rel="webmention"
             href="https://webmention.io/www.buzl.uk/webmention"
         />
-        {% seo %}
+        <script defer src="/assets/scripts/404.js"></script>
     </head>
-
-    <body>
-        {% include header.html %}
-        <main>{{ content }}</main>
-        {% include footer.html %}
+    <body id="notfound">
+        <terminal></terminal>
     </body>
 </html>

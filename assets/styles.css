@@ -450,3 +450,37 @@ spinner[reverse]::after {
 .signature {
     margin-top: 1rem;
 }
+
+#notfound {
+    max-width: unset;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    background-color: #241f31;
+    font-family: "Liberation Mono", monospace;
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+terminal {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+terminal > button {
+    display: block;
+    color: black;
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 1rem;
+}
+
+terminal > button:hover {
+    background-color: #f0f0f0;
+}

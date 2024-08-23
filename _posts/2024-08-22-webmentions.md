@@ -23,7 +23,7 @@ Notifications are simple HTTP requests. For that reason, we need a server that l
 <link rel="webmention" href="https://webmention.io/www.buzl.uk/webmention">
 ```
 
-With this tag, other websites can recognize that we accept webmentions. Showing them on your page is also very easy. I have a little script located at [webmentions.js](webmentions.js) that fetches the webmentions from the service based on the URL of the post you're viewing as the target. Then, it adds them to the page as a list and shows them in the DOM. If there are no webmentions, the webmentions section is hidden.
+With this tag, other websites can recognize that we accept webmentions. Showing them on your page is also very easy. I have a little script located at [webmentions.js](/assets/scripts/webmentions.js) that fetches the webmentions from the service based on the URL of the post you're viewing as the target. Then, it adds them to the page as a list and shows them in the DOM. If there are no webmentions, the webmentions section is hidden.
 
 ### Part 2: Sending
 Sending webmentions manually is a bit tiresome. When you publish a post with links, for each link, you have to check if they support webmentions, and then send a request to their webmention endpoint containing the `source` and `target` URLs. Some people use services like [Webmention.app](https://webmention.app/) to automate this process, but I wanted to do it myself.

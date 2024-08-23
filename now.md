@@ -32,4 +32,4 @@ This is a page where I share what I'm currently doing, reading, watching, listen
 - [www.unidate.me](https://www.unidate.me/)
 </section>
 
-<script src="/assets/now.js"></script>
+<script src="/assets/scripts/now.js"></script>

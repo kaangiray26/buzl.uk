@@ -1,7 +1,8 @@
 ---
-layout: default
+layout: gallery
 title: buzl.uk | Gallery
 ---
+
 ## gallery
 <section markdown=1>
 These are some of my favourite photographs. All of them are free to use. Attribution is not required. However, it is always appreciated. Also, don't use them for commercial purposes.
