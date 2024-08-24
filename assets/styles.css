@@ -286,6 +286,10 @@ webmentions time {
     text-decoration: none;
 }
 
+match {
+    background-color: bisque;
+}
+
 .frontmatter {
     display: flex;
     align-items: center;
@@ -442,11 +446,25 @@ spinner[reverse]::after {
     padding: 0;
 }
 
+#search-results h3 {
+    margin: 0;
+    text-decoration: none;
+}
+
 #search-results li {
     background-color: white;
     border: 1px solid var(--border-color);
     padding: 1rem;
     border-radius: 0.375rem;
+}
+
+#search-results li > a {
+    margin: 0;
+    text-decoration: none;
+}
+
+#search-results time {
+    text-decoration: none;
 }
 
 #search-results p {

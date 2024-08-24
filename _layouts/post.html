@@ -9,9 +9,8 @@ layout: default
         >{{ page.date | date: "%B %-d, %Y" }}</time
     ></i
 >
-<!-- <i>Published on <time>{{ page.date | date_to_string }}</time></i> -->
 <!-- Include tags here -->
-{% if post.tags %}
+{% if page.tags %}
 <p>
     {% for tag in page.tags %}
     <a href="/search.html?q={{ tag }}" class="tag">#{{ tag }}</a>
