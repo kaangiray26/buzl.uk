@@ -16,7 +16,7 @@
     font-style: normal;
 }
 
-@font-face{
+@font-face {
     font-family: "Roboto Mono";
     src: url("/assets/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf")
         format("truetype");
@@ -31,12 +31,13 @@ html {
     width: 100vw;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     background-color: var(--primary);
 }
 
 body {
     padding: 0;
-    margin: auto;
+    margin: 0 1rem;
     max-width: var(--width);
     font-family: "Cantarell", sans-serif;
 }
@@ -194,7 +195,7 @@ search button:hover {
 
 #search-results li a {
     margin: 0;
-    width: fit-content
+    width: fit-content;
 }
 
 #search-results li p {
@@ -232,6 +233,10 @@ footer img {
 .img-container {
     display: flex;
     margin: 1rem 0;
+}
+
+.img-container img {
+    cursor: pointer;
 }
 
 /* Now */
@@ -275,7 +280,7 @@ footer img {
 }
 
 #last-songs .index {
-    width: 2ch;
+    width: 1ch;
     color: #666;
 }
 
