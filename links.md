@@ -2,10 +2,9 @@
 layout: default
 title: buzl.uk | Links
 ---
-## links
+## Links
 Here are some websites and content I like from around the web.
 
-<section markdown=1>
 - [Hacker News](https://news.ycombinator.com/) - Everything related but not limited to computer science and interesting things that are worth sharing
 - [GamingOnLinux](https://www.gamingonlinux.com/) - About gaming on linux but also includes news about game releases, game development and gaming software
 - [OMG! Linux](https://www.omglinux.com) - A blog about linux and open source software
@@ -19,4 +18,3 @@ Here are some websites and content I like from around the web.
 - [Bear Blog](https://bearblog.dev/discover/) - Discover new posts from the smallest blogging platform on the web
 - [Click me](https://en.wikipedia.org/wiki/Special:Random) - for a random article
 - [ruffle](https://ruffle.rs/) - An open source Flash Player emulator to play your old nostalgic games
-</section>

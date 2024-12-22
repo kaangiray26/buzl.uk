@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=5"
+        />
+        <title>That time Reddit banned me for developing an app</title>
+        <link rel="canonical" href="https://www.buzl.uk/" />
+        <!-- If you're wondering about what buzluk means, it's just my surname and it literally means "freezer" in Turkish, lol. -->
+        <meta name="title" content="buzl.uk" />
+        <meta
+            name="description"
+            content="kaangiray26's blog about software development, technology, qualities in life and more"
+        />
+
+        <meta property="og:site_name" content="buzl.uk" />
+        <meta property="og:title" content="buzl.uk" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.buzl.uk/" />
+        <meta
+            property="og:description"
+            content="kaangiray26's blog about software development, technology, qualities in life and more"
+        />
+        <meta
+            property="og:image"
+            content="https://kaangiray26.github.io/images/buzluk.png"
+        />
+
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:url" content="https://www.buzl.uk/" />
+        <meta property="twitter:title" content="Buzl.uk" />
+        <meta
+            property="twitter:description"
+            content="kaangiray26's personal website"
+        />
+        <meta
+            property="twitter:image"
+            content="https://kaangiray26.github.io/images/buzluk.png"
+        />
+        <!-- The icon I ripped from the internet. I'm sorry. -->
+        <link
+            rel="shortcut icon"
+            type="image/svg+xml"
+            href="/assets/favicon.svg"
+        />
+        <link rel="stylesheet" href="/assets/restyle.css" />
+        <!-- A RSS feed of course! -->
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            href="https://www.buzl.uk/feed.xml"
+            title="buzl.uk"
+        />
+        <!-- These are my social profiles: -->
+        <link href="https://github.com/kaangiray26" rel="me" />
+        <link href="https://mastodon.social/@kaangiray26" rel="me" />
+        <!-- This is for webmentions: -->
+        <link
+            rel="webmention"
+            href="https://webmention.io/www.buzl.uk/webmention"
+        />
+        <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>That time Reddit banned me for developing an app | buzl.uk</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="That time Reddit banned me for developing an app" />
+<meta name="author" content="kaangiray26" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Reddit did me dirty. I did them too. This is the story of how I got a permanent ban from Reddit for developing a non-commercial open-source client called Geddit." />
+<meta property="og:description" content="Reddit did me dirty. I did them too. This is the story of how I got a permanent ban from Reddit for developing a non-commercial open-source client called Geddit." />
+<link rel="canonical" href="https://www.buzl.uk/2024/08/24/reddit.html" />
+<meta property="og:url" content="https://www.buzl.uk/2024/08/24/reddit.html" />
+<meta property="og:site_name" content="buzl.uk" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-08-24T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="That time Reddit banned me for developing an app" />
+<meta name="twitter:site" content="@kaangiray26" />
+<meta name="twitter:creator" content="@kaangiray26" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"kaangiray26"},"dateModified":"2024-08-24T00:00:00+02:00","datePublished":"2024-08-24T00:00:00+02:00","description":"Reddit did me dirty. I did them too. This is the story of how I got a permanent ban from Reddit for developing a non-commercial open-source client called Geddit.","headline":"That time Reddit banned me for developing an app","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.buzl.uk/2024/08/24/reddit.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.buzl.uk/assets/favicon.svg"},"name":"kaangiray26"},"url":"https://www.buzl.uk/2024/08/24/reddit.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+
+    <body>
+        <header>
+    <div class="frontmatter">
+        <a href="/">
+            <img src="/assets/favicon.svg" />
+            <h1>buzl.uk</h1>
+        </a>
+    </div>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/contact">Contact</a>
+        <a href="/now">Now</a>
+        <a href="/links">Links</a>
+        <kbd>Alt 1-6</kbd>
+    </nav>
+    <search>
+        <form action="/search.html" method="get">
+            <kbd>Ctrl K</kbd>
+            <input
+                type="search"
+                name="q"
+                placeholder="Type something to search..."
+                autocomplete="off"
+            />
+            <button type="submit">Search</button>
+        </form>
+    </search>
+</header>
+<script type="module">
+window.addEventListener("load", () => {
+    // Add keyboard shortcuts
+    document.onkeydown = (e) => {
+        // Ctrl + K to focus on search input
+        if (e.ctrlKey && e.key === "k") {
+            e.preventDefault();
+            document.querySelector("input[type=search]").focus();
+            return;
+        }
+
+        // Alt + 1 to go to home
+        if (e.altKey && e.key === "1") {
+            e.preventDefault();
+            window.location.href = "/";
+            return;
+        }
+
+        // Alt + 2 to go to blog
+        if (e.altKey && e.key === "2") {
+            e.preventDefault();
+            window.location.href = "/blog";
+            return;
+        }
+
+        // Alt + 3 to go to gallery
+        if (e.altKey && e.key === "3") {
+            e.preventDefault();
+            window.location.href = "/gallery";
+            return;
+        }
+
+        // Alt + 4 to go to contact
+        if (e.altKey && e.key === "4") {
+            e.preventDefault();
+            window.location.href = "/contact";
+            return;
+        }
+
+        // Alt + 5 to go to now
+        if (e.altKey && e.key === "5") {
+            e.preventDefault();
+            window.location.href = "/now";
+            return;
+        }
+
+        // Alt + 6 to go to links
+        if (e.altKey && e.key === "6") {
+            e.preventDefault();
+            window.location.href = "/links";
+            return;
+        }
+    };
+
+    // Check current page and add active class to the corresponding link
+    const currentPath = window.location.pathname;
+    for (const link of document.querySelectorAll("nav a")) {
+        if (link.getAttribute("href") === currentPath) {
+            link.classList.add("active");
+            break;
+        }
+    }
+});
+</script>
+        <main><script defer src="/assets/scripts/post.js"></script>
+<style>
+    main img{
+        cursor: pointer;
+    }
+
+    main img:hover{
+        filter: brightness(0.9);
+    }
+
+    dialog img{
+        width: 100%;
+        height: auto;
+        filter: none !important;
+    }
+</style>
+
+<h1 class="post-title">That time Reddit banned me for developing an app</h1>
+<p>Reddit did me dirty. I did them too. This is the story of how I got a permanent ban from Reddit for developing a non-commercial open-source client called Geddit.</p>
+
+<!-- Meta -->
+<div class="post-author">
+    <img src="/assets/spaghetti.webp" />
+    <div>
+        <p>
+            <span>By kaangiray26</span>
+        </p>
+        <p>
+            <time datetime="2024-08-24T00:00:00+02:00">
+                Aug 24, 2024
+            </time>
+        </p>
+    </div>
+</div>
+
+<!-- Divider -->
+<hr />
+
+<!-- Content -->
+<h2 id="how-it-all-started">How it all started</h2>
+<p>Around June 2023 Reddit <a href="https://arstechnica.com/gadgets/2023/06/reddit-api-changes-are-imminent-heres-whats-happening-to-your-favorite-apps/">announced</a> their new API pricing, I mean it’s kinda wrong to say “new API pricing” because until that time it was all free to use the API. According to them, the pricing they’ve planned was <strong>“$12,000 per 50 million API requests”</strong>, which meant a death sentence for all the non-commercial apps and bots that were used by millions of users. If you think that’s not a big deal, keep reading…</p>
+
+<p>You must have heard of the popular Reddit client <a href="https://apolloapp.io/">Apollo</a>, developed by <a href="https://christianselig.com/">Christian Selig</a>, who has also other notable apps like <a href="https://junoapp.co/">Juno</a>, a YouTube app for Apple Vision Pro. If memory serves right, it was also on the front page of <a href="https://news.ycombinator.com/item?id=39225004">Hacker News</a>. Christian shared a <a href="https://redd.it/13ws4w3">post</a> on Reddit stating that <strong>“Apollo would have to pay Reddit $20 million per year to keep running as-is”</strong>. Cricket sounds… I know.</p>
+
+<h2 id="geddit">Geddit</h2>
+<p>I was a Reddit user for a long time and I had lots of bots running on Reddit, just for fun. Upon hearing the news, being an ambitious and naive developer in my third year at university, I decided to inspect the Reddit API to see what I could do. Then I’ve discovered that you could get the whole page in JSON format by adding <code class="language-plaintext highlighter-rouge">.json</code> to the end of the URL. That was my big aha moment.</p>
+
+<p>In a couple days I’ve put together a simple wrapper for the Reddit API as a small Javascript library and named it Geddit, which I thought was a funny name. I’ve shared it on <a href="https://github.com/kaangiray26/geddit">GitHub</a> and I still think it’s working today. With this library, you could view Reddit as a read-only user, with all the features you’d expect from a Reddit client with anonymous browsing. The thing is, you didn’t need to authenticate to use it, which was a way to develop further apps without needing to pay Reddit.</p>
+
+<p>And then, I came across <a href="https://capacitorjs.com/">capacitor</a> and <a href="https://ionicframework.com/">ionic framework</a>, which were libraries that allowed you to develop native mobile apps in HTML, CSS and Javascript. It was like <a href="https://www.electronjs.org/">Electron</a> but for mobile. And things started to get interesting.</p>
+
+<h2 id="the-app">The app</h2>
+<section>
+    <a href="https://github.com/kaangiray26/geddit-app" class="repo-link">
+        <div class="repo">
+            <img src="/assets/images/geddit.png" />
+            <h1>Geddit</h1>
+            <p>An open-source, Reddit client for Android without using the public JSON feed</p>
+            <div class="badges">
+                <img src="https://img.shields.io/github/stars/kaangiray26/geddit-app?style=flat" />
+                <img src="https://img.shields.io/github/issues/kaangiray26/geddit-app?style=flat" />
+                <img src="https://img.shields.io/github/forks/kaangiray26/geddit-app?style=flat" />
+                <img alt="License" src="https://img.shields.io/github/license/kaangiray26/geddit-app.svg?style=flat" />
+            </div>
+        </div>
+    </a>
+</section>
+
+<p>This little fella came around the following month as an Android app. It was just a simple JSON parser actually, but it worked well as a Reddit client. People started using it, and wrote to me about it. And it also got me going to see how it was mentioned on the internet.</p>
+<ul>
+  <li><a href="https://news.ycombinator.com/item?id=36690895">Hacker News</a></li>
+  <li><a href="https://www.androidpolice.com/geddit-free-reddit-app-for-android/">Android Police</a></li>
+  <li><a href="https://redd.it/14xhc8g">Reddit</a></li>
+  <li><a href="https://www.youtube.com/watch?v=L0S6D5TbimA">YouTube</a></li>
+</ul>
+
+<p>I know it’s not a big number but there are over 25k downloads solely from the GitHub Releases page to this day, without counting the F-Droid downloads (can’t see the stats).</p>
+
+<h2 id="end-of-the-road">End of the road</h2>
+<p>I’ve released several versions and added some styling based on the Material Design guidelines. Then I’ve published it on the <a href="https://f-droid.org/en/">F-Droid</a> store, which was something I’ve never done before. It was a great experience to see your app on a store, even if it was a small one.</p>
+
+<p>And then, I’ve received an e-mail from Reddit. To be honest, I was expecting it.</p>
+
+<p><img src="/assets/images/reddit-email-1.png" alt="Reddit email 1" /></p>
+
+<p>There were some misunderstandings in the email. This wasn’t a commercial product, nor I was doing some kind of explotiation to use the same API without restrictions. This was just the way how the Reddit website worked if you didn’t have an account. I’ve replied to the email in the most respectful way I could.</p>
+
+<p><img src="/assets/images/reddit-email-2.png" alt="Reddit email 2" /></p>
+
+<p>I’ve decided to pause the development of the app until I received a response from Reddit, which I never did. So, you might as well say that this project is dead, although it’s still working today. Thanks for the fun, Geddit.</p>
+
+<style>
+section > a {
+    color: unset;
+    text-decoration: none;
+    display: block;
+}
+
+.repo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.repo > *{
+    margin: 0;
+}
+
+.repo h1{
+    color: unset;
+    font-weight: 700;
+}
+
+.repo > img {
+    height: 96px;
+    width: auto;
+    box-shadow: none;
+    border-radius:unset;
+}
+
+.repo .badges{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    justify-content: center;
+}
+
+.repo .badges img{
+    height: 24px;
+    width: auto;
+}
+</style>
+
+
+<!-- Postscript -->
+
+<div>
+    <strong>P.S.</strong>
+    <p>God, I miss the old Reddit. I should start my own text-only social media platform based on Markdown. Maybe I'll call it "Markit", and demand $30k per year for the API. Maybe I should just "forgetaboutit"...</p>
+</div>
+
+
+<!-- Image dialog -->
+<dialog id="image-dialog" onclick="this.close()">
+    <img src="" alt="" />
+</dialog>
+<webmentions>
+    <h3>Webmentions</h3>
+</webmentions>
+<script src="/assets/scripts/webmentions.js"></script>
+</main>
+        <footer>
+    <a href="feed.xml">RSS</a>
+    <p>
+        Licensed under the
+        <a
+            target="_blank"
+            href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >CC BY-NC-SA 4.0 License</a
+        >.
+    </p>
+    <p>Copyright © <time id="date"></time> Kaan Giray Buzluk</p>
+    <img src="/assets/lf1B0.gif" class="mate" />
+</footer>
+
+<script type="module">
+    window.addEventListener("load", async () => {
+        const date = new Date().getFullYear();
+        document.getElementById("date").textContent = date;
+    });
+</script>
+
+    </body>
+</html>

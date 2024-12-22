@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+    <channel>
+        <title>buzl.uk</title>
+        <link>https://www.buzl.uk</link>
+        <atom:link href="https://www.buzl.uk/feed.xml" rel="self" type="application/rss+xml" />
+        <description>kaangiray26's blog about software development, technology, qualities in life and more</description>
+        <lastBuildDate>Sun, 22 Dec 2024 01:25:44 +0100</lastBuildDate>
+        
+        <item>
+            <title>Building Desktop Apps with Python</title>
+            <link>
+                https://www.buzl.uk/2024/08/31/positron.html
+            </link>
+            <description>
+                I’ve built something, and I’ll probably regret it later. You remember Electron? How can you forget, it’s everywhere, even in your text editor. So, I thought, I can build something similar for Python. Aaaand, here we are. I present you, Positron.
+            </description>
+            <pubDate>Sat, 31 Aug 2024 00:00:00 +0200</pubDate>
+            <guid>
+                https://www.buzl.uk/2024/08/31/positron.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>Want extra keys? Use your earbuds</title>
+            <link>
+                https://www.buzl.uk/2024/08/25/earbuds.html
+            </link>
+            <description>
+                Have you ever wanted to set random actions to your keyboard keys but realized that you use them all for other purposes, like writing? Well, with this little trick, you can use your earbuds (in an unconventional way) to run custom actions on your computer.
+            </description>
+            <pubDate>Sun, 25 Aug 2024 00:00:00 +0200</pubDate>
+            <guid>
+                https://www.buzl.uk/2024/08/25/earbuds.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>That time Reddit banned me for developing an app</title>
+            <link>
+                https://www.buzl.uk/2024/08/24/reddit.html
+            </link>
+            <description>
+                How it all startedAround June 2023 Reddit announced their new API pricing, I mean it’s kinda wrong to say “new API pricing” because until that time it was all free to use the API. According to them, the pricing they’ve planned was “$12,000 per 50 million API requests”, which meant a death sentence for all the non-commercial apps and bots that were used by millions of users. If you think that’s not a big deal, keep reading…
+            </description>
+            <pubDate>Sat, 24 Aug 2024 00:00:00 +0200</pubDate>
+            <guid>
+                https://www.buzl.uk/2024/08/24/reddit.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>How I work with Jekyll</title>
+            <link>
+                https://www.buzl.uk/2024/08/23/jekyll.html
+            </link>
+            <description>
+                I’m slowly losing my interest in frameworks and tools. It came as a surprise to me but I’m “actively” picking plain HTML, CSS, and as little JavaScript as possible over Vue.js, Alpine.js or others. I don’t remember the last time I used a Bootstrap component or even a Bootstrap class. I’m not saying that I’ve become an expert in web development, like an artist, who can spit out elements and styles from his mind. Quite the opposite actually. Not being dependent on something leaves you with time to think about what you can do differently. That’s something I’ve found with Jekyll.
+            </description>
+            <pubDate>Fri, 23 Aug 2024 00:00:00 +0200</pubDate>
+            <guid>
+                https://www.buzl.uk/2024/08/23/jekyll.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>a 404 page</title>
+            <link>
+                https://www.buzl.uk/2024/08/23/404.html
+            </link>
+            <description>
+                Have time to waste? You are in the right place.  Click here.
+            </description>
+            <pubDate>Fri, 23 Aug 2024 00:00:00 +0200</pubDate>
+            <guid>
+                https://www.buzl.uk/2024/08/23/404.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>Using Webmentions with GitHub Actions</title>
+            <link>
+                https://www.buzl.uk/2024/08/22/webmentions.html
+            </link>
+            <description>
+                Testing webmentions for the first time. This post will send a webmention to another post on my blog. Let’s see if it works.
+            </description>
+            <pubDate>Thu, 22 Aug 2024 00:00:00 +0200</pubDate>
+            <guid>
+                https://www.buzl.uk/2024/08/22/webmentions.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>Python virtual environments in Zed</title>
+            <link>
+                https://www.buzl.uk/2024/08/21/pyright.html
+            </link>
+            <description>
+                I’ve been using Zed as my main editor for over a month now. The reason I switched from VSCode was that VSCode was too slow when I was working with multiple windows open. Switching back and forth between windows was creating a lag that was unbearable. I saw Zed as a lightweight and crazy fast alternative, and I wanted to give it a try. There were some problems however…
+            </description>
+            <pubDate>Wed, 21 Aug 2024 00:00:00 +0200</pubDate>
+            <guid>
+                https://www.buzl.uk/2024/08/21/pyright.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>Some Progressive Rock Albums You Should Listen</title>
+            <link>
+                https://www.buzl.uk/2024/08/20/progrock.html
+            </link>
+            <description>
+                I’m not going to start with explaining what progressive rock is, because I have no idea. However, I can tell I have a taste for it. Here are some of my favorite progressive rock albums that you should listen to.
+            </description>
+            <pubDate>Tue, 20 Aug 2024 00:00:00 +0200</pubDate>
+            <guid>
+                https://www.buzl.uk/2024/08/20/progrock.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>A Naive Routing</title>
+            <link>
+                https://www.buzl.uk/2024/08/18/routing.html
+            </link>
+            <description>
+                Warning: This page includes interactive examples. If you hate having fun, please close the tab immediately.
+            </description>
+            <pubDate>Sun, 18 Aug 2024 00:00:00 +0200</pubDate>
+            <guid>
+                https://www.buzl.uk/2024/08/18/routing.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>CSS spinners</title>
+            <link>
+                https://www.buzl.uk/2024/08/16/spinner.html
+            </link>
+            <description>
+                I wanted to share this trick for adding simple spinners to your website. It’s just a few lines of CSS, and you can also customize which icons to use.
+            </description>
+            <pubDate>Fri, 16 Aug 2024 00:00:00 +0200</pubDate>
+            <guid>
+                https://www.buzl.uk/2024/08/16/spinner.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>some places on google maps</title>
+            <link>
+                https://www.buzl.uk/2024/08/05/maps.html
+            </link>
+            <description>
+                This post does not need a lot of explanation. Here are some places I’ve found interesting on Google Maps:
+            </description>
+            <pubDate>Mon, 05 Aug 2024 00:00:00 +0200</pubDate>
+            <guid>
+                https://www.buzl.uk/2024/08/05/maps.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>migrating my website</title>
+            <link>
+                https://www.buzl.uk/2024/08/04/migration.html
+            </link>
+            <description>
+                That time of the year has come again. I need to change my website, add some silly features, and remove some necessary ones. Until now, I was using Vue.js and GitHub Pages to build and host my website. But it was too exhausting to maintain the website and write new posts because I needed to build the website myself every time I make a change in the code. Besides, I had to deal with HTML and this prevented me from writing new posts frequently. So, I decided to migrate my website to Jekyll as, I can’t stress this enough, I LOVE 😍 writing in Markdown. If god wanted to send some sacred text to the earth in the 21st century, he would definitely choose Markdown. Anyway, let’s see how it went.
+            </description>
+            <pubDate>Sun, 04 Aug 2024 00:00:00 +0200</pubDate>
+            <guid>
+                https://www.buzl.uk/2024/08/04/migration.html
+            </guid>
+        </item>
+        
+        <item>
+            <title>analytics with duckdb</title>
+            <link>
+                https://www.buzl.uk/2024/08/03/duckdb.html
+            </link>
+            <description>
+                Recently, I’ve become curious about the visitor statistics of my websites. After a quick search, I decided to just build my own analytics solutionto avoid any big brother-like companies (I’m looking at you big 5). So, here we are, building a simple analytics solution with DuckDB.
+            </description>
+            <pubDate>Sat, 03 Aug 2024 00:00:00 +0200</pubDate>
+            <guid>
+                https://www.buzl.uk/2024/08/03/duckdb.html
+            </guid>
+        </item>
+        
+    </channel>
+</rss>

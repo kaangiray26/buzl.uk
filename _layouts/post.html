@@ -1,27 +1,57 @@
 ---
 layout: default
 ---
+<script defer src="/assets/scripts/post.js"></script>
+<style>
+    main img{
+        cursor: pointer;
+    }
 
-<h1>{{ page.title }}</h1>
-<i
-    >Published on
-    <time datetime="{{ page.date | date_to_xmlschema }}"
-        >{{ page.date | date: "%B %-d, %Y" }}</time
-    ></i
->
-<!-- Include tags here -->
-{% if page.tags %}
-<p>
-    {% for tag in page.tags %}
-    <a href="/search.html?q={{ tag }}" class="tag">#{{ tag }}</a>
-    {% endfor %}
-</p>
-{% endif %} {{ content }}
+    main img:hover{
+        filter: brightness(0.9);
+    }
 
-<i><strong>kaangiray26</strong></i>
+    dialog img{
+        width: 100%;
+        height: auto;
+        filter: none !important;
+    }
+</style>
+
+<h1 class="post-title">{{ page.title }}</h1>
+<p>{{ page.description }}</p>
+
+<!-- Meta -->
+<div class="post-author">
+    <img src="/assets/spaghetti.webp" />
+    <div>
+        <p>
+            <span>By {{ page.author }}</span>
+        </p>
+        <p>
+            <time datetime="{{ page.date | date_to_xmlschema }}">
+                {{ page.date | date: "%b %-d, %Y" }}
+            </time>
+        </p>
+    </div>
+</div>
+
+<!-- Divider -->
+<hr />
+
+<!-- Content -->
+{{ content }}
+
+<!-- Postscript -->
 {% if page.postscript %}
 <div>
     <strong>P.S.</strong>
     <p>{{ page.postscript }}</p>
 </div>
-{% endif %} {% include webmentions.html %}
+{% endif %}
+
+<!-- Image dialog -->
+<dialog id="image-dialog" onclick="this.close()">
+    <img src="" alt="" />
+</dialog>
+{% include webmentions.html %}

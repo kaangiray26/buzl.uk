@@ -2,11 +2,10 @@
 layout: default
 title: buzl.uk | Blog
 ---
-
 <h2>All Posts</h2>
 <!-- This loops through the paginated posts -->
 <section>
-    <ul class="blog-list">
+    <ul id="blog-list">
         {% for post in paginator.posts %}
         <li class="blog-item">
             <time>{{ post.date | date_to_string }}</time>

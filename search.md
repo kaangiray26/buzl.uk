@@ -2,5 +2,5 @@
 layout: search
 title: Search
 ---
-<p>Blog posts including the term <b><i id="search-query"></i></b>:</p>
+Blog posts including the term <kbd id="search-query"></kbd>
 <ul id="search-results"></ul>

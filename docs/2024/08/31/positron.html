@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=5"
+        />
+        <title>Building Desktop Apps with Python</title>
+        <link rel="canonical" href="https://www.buzl.uk/" />
+        <!-- If you're wondering about what buzluk means, it's just my surname and it literally means "freezer" in Turkish, lol. -->
+        <meta name="title" content="buzl.uk" />
+        <meta
+            name="description"
+            content="kaangiray26's blog about software development, technology, qualities in life and more"
+        />
+
+        <meta property="og:site_name" content="buzl.uk" />
+        <meta property="og:title" content="buzl.uk" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.buzl.uk/" />
+        <meta
+            property="og:description"
+            content="kaangiray26's blog about software development, technology, qualities in life and more"
+        />
+        <meta
+            property="og:image"
+            content="https://kaangiray26.github.io/images/buzluk.png"
+        />
+
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:url" content="https://www.buzl.uk/" />
+        <meta property="twitter:title" content="Buzl.uk" />
+        <meta
+            property="twitter:description"
+            content="kaangiray26's personal website"
+        />
+        <meta
+            property="twitter:image"
+            content="https://kaangiray26.github.io/images/buzluk.png"
+        />
+        <!-- The icon I ripped from the internet. I'm sorry. -->
+        <link
+            rel="shortcut icon"
+            type="image/svg+xml"
+            href="/assets/favicon.svg"
+        />
+        <link rel="stylesheet" href="/assets/restyle.css" />
+        <!-- A RSS feed of course! -->
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            href="https://www.buzl.uk/feed.xml"
+            title="buzl.uk"
+        />
+        <!-- These are my social profiles: -->
+        <link href="https://github.com/kaangiray26" rel="me" />
+        <link href="https://mastodon.social/@kaangiray26" rel="me" />
+        <!-- This is for webmentions: -->
+        <link
+            rel="webmention"
+            href="https://webmention.io/www.buzl.uk/webmention"
+        />
+        <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Building Desktop Apps with Python | buzl.uk</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Building Desktop Apps with Python" />
+<meta name="author" content="kaangiray26" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I’ve built something, and I’ll probably regret it later. You remember Electron? How can you forget, it’s everywhere, even in your text editor. So, I thought, I can build something similar for Python. Aaaand, here we are. I present you, Positron." />
+<meta property="og:description" content="I’ve built something, and I’ll probably regret it later. You remember Electron? How can you forget, it’s everywhere, even in your text editor. So, I thought, I can build something similar for Python. Aaaand, here we are. I present you, Positron." />
+<link rel="canonical" href="https://www.buzl.uk/2024/08/31/positron.html" />
+<meta property="og:url" content="https://www.buzl.uk/2024/08/31/positron.html" />
+<meta property="og:site_name" content="buzl.uk" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-08-31T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Building Desktop Apps with Python" />
+<meta name="twitter:site" content="@kaangiray26" />
+<meta name="twitter:creator" content="@kaangiray26" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"kaangiray26"},"dateModified":"2024-08-31T00:00:00+02:00","datePublished":"2024-08-31T00:00:00+02:00","description":"I’ve built something, and I’ll probably regret it later. You remember Electron? How can you forget, it’s everywhere, even in your text editor. So, I thought, I can build something similar for Python. Aaaand, here we are. I present you, Positron.","headline":"Building Desktop Apps with Python","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.buzl.uk/2024/08/31/positron.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.buzl.uk/assets/favicon.svg"},"name":"kaangiray26"},"url":"https://www.buzl.uk/2024/08/31/positron.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+
+    <body>
+        <header>
+    <div class="frontmatter">
+        <a href="/">
+            <img src="/assets/favicon.svg" />
+            <h1>buzl.uk</h1>
+        </a>
+    </div>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/contact">Contact</a>
+        <a href="/now">Now</a>
+        <a href="/links">Links</a>
+        <kbd>Alt 1-6</kbd>
+    </nav>
+    <search>
+        <form action="/search.html" method="get">
+            <kbd>Ctrl K</kbd>
+            <input
+                type="search"
+                name="q"
+                placeholder="Type something to search..."
+                autocomplete="off"
+            />
+            <button type="submit">Search</button>
+        </form>
+    </search>
+</header>
+<script type="module">
+window.addEventListener("load", () => {
+    // Add keyboard shortcuts
+    document.onkeydown = (e) => {
+        // Ctrl + K to focus on search input
+        if (e.ctrlKey && e.key === "k") {
+            e.preventDefault();
+            document.querySelector("input[type=search]").focus();
+            return;
+        }
+
+        // Alt + 1 to go to home
+        if (e.altKey && e.key === "1") {
+            e.preventDefault();
+            window.location.href = "/";
+            return;
+        }
+
+        // Alt + 2 to go to blog
+        if (e.altKey && e.key === "2") {
+            e.preventDefault();
+            window.location.href = "/blog";
+            return;
+        }
+
+        // Alt + 3 to go to gallery
+        if (e.altKey && e.key === "3") {
+            e.preventDefault();
+            window.location.href = "/gallery";
+            return;
+        }
+
+        // Alt + 4 to go to contact
+        if (e.altKey && e.key === "4") {
+            e.preventDefault();
+            window.location.href = "/contact";
+            return;
+        }
+
+        // Alt + 5 to go to now
+        if (e.altKey && e.key === "5") {
+            e.preventDefault();
+            window.location.href = "/now";
+            return;
+        }
+
+        // Alt + 6 to go to links
+        if (e.altKey && e.key === "6") {
+            e.preventDefault();
+            window.location.href = "/links";
+            return;
+        }
+    };
+
+    // Check current page and add active class to the corresponding link
+    const currentPath = window.location.pathname;
+    for (const link of document.querySelectorAll("nav a")) {
+        if (link.getAttribute("href") === currentPath) {
+            link.classList.add("active");
+            break;
+        }
+    }
+});
+</script>
+        <main><script defer src="/assets/scripts/post.js"></script>
+<style>
+    main img{
+        cursor: pointer;
+    }
+
+    main img:hover{
+        filter: brightness(0.9);
+    }
+
+    dialog img{
+        width: 100%;
+        height: auto;
+        filter: none !important;
+    }
+</style>
+
+<h1 class="post-title">Building Desktop Apps with Python</h1>
+<p></p>
+
+<!-- Meta -->
+<div class="post-author">
+    <img src="/assets/spaghetti.webp" />
+    <div>
+        <p>
+            <span>By kaangiray26</span>
+        </p>
+        <p>
+            <time datetime="2024-08-31T00:00:00+02:00">
+                Aug 31, 2024
+            </time>
+        </p>
+    </div>
+</div>
+
+<!-- Divider -->
+<hr />
+
+<!-- Content -->
+<p>I’ve built something, and I’ll probably regret it later. You remember <a href="https://www.electronjs.org/">Electron</a>? How can you forget, it’s everywhere, even in your <a href="https://code.visualstudio.com/">text editor</a>. So, I thought, I <strong>can</strong> build something similar for Python. Aaaand, here we are. I present you, <a href="https://github.com/kaangiray26/positron">Positron</a>.</p>
+
+<p><img src="/assets/images/positron-screenshot.png" alt="Positron screenshot" /></p>
+
+<p>Before you say anything, let me clarify some things. First, this is not a framework; it’s simply a way to package your Python applications as desktop apps. Second, it’s not a replacement for Electron, it’s not cross-platform, it’s only for Linux. Third, I know you can also run Python apps with Electron. And lastly, it might be inefficient as hell, but it has worked fine for me, so far.</p>
+
+<h2 id="about-positron">About Positron</h2>
+<p>So, what is Positron? Positron is a way to build desktop applications on Linux with Python, where you can develop your frontend with HTML, CSS, and JavaScript. It uses the Firefox browser to render the content, while serving the files and routes with <a href="https://quart.palletsprojects.com/en/latest/">Quart</a>, a Python web microframework based on <a href="https://flask.palletsprojects.com">Flask</a>, but with async capabilities.</p>
+
+<p>Packaging the app is done with <a href="https://flatpak.org/">Flatpak</a>, which works really well in my opinion. It’s available for most Linux distributions if not all, and it’s easy to install and use. Besides, it’s a great way to distribute your apps built with Positron on <a href="https://flathub.org/">FlatHub</a>.</p>
+
+<h2 id="why-did-i-build-it">Why did I build it?</h2>
+<p>This question is always hard to answer. I’d simply say, because I thought it should be possible to build it. But perhaps, the real reason might be that the current solutions for building graphical desktop applications with Python were not satisfying for me, as either they were too old and unpleasant to look at, or they were too complex to work with. Why should I try to build something with them if I don’t feel any joy in the process? So, I built this whacky thing, and I feel good about it.</p>
+
+<h2 id="can-it-">Can it …?</h2>
+<p>Probably, yes, and no. It can do a lot of things, it can’t do a lot of things. There are still things that I should improve, such as making the build size smaller, or making the app more performant. So far, I’ve tried creating a music player with it, and it worked quite well. I’m sure it can handle more complex applications, but there would be a point where you’d say, “Why am I even building graphical desktop applications for Linux, and with Python?”. I hope you’ll reach that point before I do.</p>
+
+<h2 id="about-the-name">About the name</h2>
+<p>I’m not good at naming things, they come all plain and boring. The name actually came to me from Asimov’s Robot series. Robots in the series are powered by their positronic brains, which I thought was a cool name for this project. And, since there’s Electron, why not Positron?</p>
+
+<h2 id="whats-next">What’s next?</h2>
+<p>Give it a try, and let me know what we can improve. I’ve also created a documentary with some topics that might be helpful for you to get started. You can find the repository below. Thanks for reading! And have fun!</p>
+
+<p><a href="https://github.com/kaangiray26/positron">Positron on GitHub</a></p>
+
+
+<!-- Postscript -->
+
+<div>
+    <strong>P.S.</strong>
+    <p>What was I thinking? People will probably curse it for the ~270MB build size. But hey, positrons have the same mass as electrons, so it's fine, right? 😅</p>
+</div>
+
+
+<!-- Image dialog -->
+<dialog id="image-dialog" onclick="this.close()">
+    <img src="" alt="" />
+</dialog>
+<webmentions>
+    <h3>Webmentions</h3>
+</webmentions>
+<script src="/assets/scripts/webmentions.js"></script>
+</main>
+        <footer>
+    <a href="feed.xml">RSS</a>
+    <p>
+        Licensed under the
+        <a
+            target="_blank"
+            href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >CC BY-NC-SA 4.0 License</a
+        >.
+    </p>
+    <p>Copyright © <time id="date"></time> Kaan Giray Buzluk</p>
+    <img src="/assets/lf1B0.gif" class="mate" />
+</footer>
+
+<script type="module">
+    window.addEventListener("load", async () => {
+        const date = new Date().getFullYear();
+        document.getElementById("date").textContent = date;
+    });
+</script>
+
+    </body>
+</html>

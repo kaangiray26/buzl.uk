@@ -7,14 +7,16 @@
     </div>
     <nav>
         <a href="/">Home</a>
-        <a href="/blog">Blog</a>
+        <a href="/blog/">Blog</a>
         <a href="/gallery">Gallery</a>
         <a href="/contact">Contact</a>
         <a href="/now">Now</a>
         <a href="/links">Links</a>
+        <kbd>Alt 1-6</kbd>
     </nav>
     <search>
         <form action="/search.html" method="get">
+            <kbd>Ctrl K</kbd>
             <input
                 type="search"
                 name="q"
@@ -25,4 +27,67 @@
         </form>
     </search>
 </header>
-<hr />
+<script type="module">
+window.addEventListener("load", () => {
+    // Add keyboard shortcuts
+    document.onkeydown = (e) => {
+        // Ctrl + K to focus on search input
+        if (e.ctrlKey && e.key === "k") {
+            e.preventDefault();
+            document.querySelector("input[type=search]").focus();
+            return;
+        }
+
+        // Alt + 1 to go to home
+        if (e.altKey && e.key === "1") {
+            e.preventDefault();
+            window.location.href = "/";
+            return;
+        }
+
+        // Alt + 2 to go to blog
+        if (e.altKey && e.key === "2") {
+            e.preventDefault();
+            window.location.href = "/blog";
+            return;
+        }
+
+        // Alt + 3 to go to gallery
+        if (e.altKey && e.key === "3") {
+            e.preventDefault();
+            window.location.href = "/gallery";
+            return;
+        }
+
+        // Alt + 4 to go to contact
+        if (e.altKey && e.key === "4") {
+            e.preventDefault();
+            window.location.href = "/contact";
+            return;
+        }
+
+        // Alt + 5 to go to now
+        if (e.altKey && e.key === "5") {
+            e.preventDefault();
+            window.location.href = "/now";
+            return;
+        }
+
+        // Alt + 6 to go to links
+        if (e.altKey && e.key === "6") {
+            e.preventDefault();
+            window.location.href = "/links";
+            return;
+        }
+    };
+
+    // Check current page and add active class to the corresponding link
+    const currentPath = window.location.pathname;
+    for (const link of document.querySelectorAll("nav a")) {
+        if (link.getAttribute("href") === currentPath) {
+            link.classList.add("active");
+            break;
+        }
+    }
+});
+</script>

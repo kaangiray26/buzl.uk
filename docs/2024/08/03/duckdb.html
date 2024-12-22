@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=5"
+        />
+        <title>analytics with duckdb</title>
+        <link rel="canonical" href="https://www.buzl.uk/" />
+        <!-- If you're wondering about what buzluk means, it's just my surname and it literally means "freezer" in Turkish, lol. -->
+        <meta name="title" content="buzl.uk" />
+        <meta
+            name="description"
+            content="kaangiray26's blog about software development, technology, qualities in life and more"
+        />
+
+        <meta property="og:site_name" content="buzl.uk" />
+        <meta property="og:title" content="buzl.uk" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.buzl.uk/" />
+        <meta
+            property="og:description"
+            content="kaangiray26's blog about software development, technology, qualities in life and more"
+        />
+        <meta
+            property="og:image"
+            content="https://kaangiray26.github.io/images/buzluk.png"
+        />
+
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:url" content="https://www.buzl.uk/" />
+        <meta property="twitter:title" content="Buzl.uk" />
+        <meta
+            property="twitter:description"
+            content="kaangiray26's personal website"
+        />
+        <meta
+            property="twitter:image"
+            content="https://kaangiray26.github.io/images/buzluk.png"
+        />
+        <!-- The icon I ripped from the internet. I'm sorry. -->
+        <link
+            rel="shortcut icon"
+            type="image/svg+xml"
+            href="/assets/favicon.svg"
+        />
+        <link rel="stylesheet" href="/assets/restyle.css" />
+        <!-- A RSS feed of course! -->
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            href="https://www.buzl.uk/feed.xml"
+            title="buzl.uk"
+        />
+        <!-- These are my social profiles: -->
+        <link href="https://github.com/kaangiray26" rel="me" />
+        <link href="https://mastodon.social/@kaangiray26" rel="me" />
+        <!-- This is for webmentions: -->
+        <link
+            rel="webmention"
+            href="https://webmention.io/www.buzl.uk/webmention"
+        />
+        <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>analytics with duckdb | buzl.uk</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="analytics with duckdb" />
+<meta name="author" content="kaangiray26" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Recently, I’ve become curious about the visitor statistics of my websites. After a quick search, I decided to just build my own analytics solution to avoid any big brother-like companies (I’m looking at you big 5). So, here we are, building a simple analytics solution with DuckDB." />
+<meta property="og:description" content="Recently, I’ve become curious about the visitor statistics of my websites. After a quick search, I decided to just build my own analytics solution to avoid any big brother-like companies (I’m looking at you big 5). So, here we are, building a simple analytics solution with DuckDB." />
+<link rel="canonical" href="https://www.buzl.uk/2024/08/03/duckdb.html" />
+<meta property="og:url" content="https://www.buzl.uk/2024/08/03/duckdb.html" />
+<meta property="og:site_name" content="buzl.uk" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-08-03T00:00:00+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="analytics with duckdb" />
+<meta name="twitter:site" content="@kaangiray26" />
+<meta name="twitter:creator" content="@kaangiray26" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"kaangiray26"},"dateModified":"2024-08-03T00:00:00+02:00","datePublished":"2024-08-03T00:00:00+02:00","description":"Recently, I’ve become curious about the visitor statistics of my websites. After a quick search, I decided to just build my own analytics solution to avoid any big brother-like companies (I’m looking at you big 5). So, here we are, building a simple analytics solution with DuckDB.","headline":"analytics with duckdb","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.buzl.uk/2024/08/03/duckdb.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.buzl.uk/assets/favicon.svg"},"name":"kaangiray26"},"url":"https://www.buzl.uk/2024/08/03/duckdb.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+
+    <body>
+        <header>
+    <div class="frontmatter">
+        <a href="/">
+            <img src="/assets/favicon.svg" />
+            <h1>buzl.uk</h1>
+        </a>
+    </div>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/contact">Contact</a>
+        <a href="/now">Now</a>
+        <a href="/links">Links</a>
+        <kbd>Alt 1-6</kbd>
+    </nav>
+    <search>
+        <form action="/search.html" method="get">
+            <kbd>Ctrl K</kbd>
+            <input
+                type="search"
+                name="q"
+                placeholder="Type something to search..."
+                autocomplete="off"
+            />
+            <button type="submit">Search</button>
+        </form>
+    </search>
+</header>
+<script type="module">
+window.addEventListener("load", () => {
+    // Add keyboard shortcuts
+    document.onkeydown = (e) => {
+        // Ctrl + K to focus on search input
+        if (e.ctrlKey && e.key === "k") {
+            e.preventDefault();
+            document.querySelector("input[type=search]").focus();
+            return;
+        }
+
+        // Alt + 1 to go to home
+        if (e.altKey && e.key === "1") {
+            e.preventDefault();
+            window.location.href = "/";
+            return;
+        }
+
+        // Alt + 2 to go to blog
+        if (e.altKey && e.key === "2") {
+            e.preventDefault();
+            window.location.href = "/blog";
+            return;
+        }
+
+        // Alt + 3 to go to gallery
+        if (e.altKey && e.key === "3") {
+            e.preventDefault();
+            window.location.href = "/gallery";
+            return;
+        }
+
+        // Alt + 4 to go to contact
+        if (e.altKey && e.key === "4") {
+            e.preventDefault();
+            window.location.href = "/contact";
+            return;
+        }
+
+        // Alt + 5 to go to now
+        if (e.altKey && e.key === "5") {
+            e.preventDefault();
+            window.location.href = "/now";
+            return;
+        }
+
+        // Alt + 6 to go to links
+        if (e.altKey && e.key === "6") {
+            e.preventDefault();
+            window.location.href = "/links";
+            return;
+        }
+    };
+
+    // Check current page and add active class to the corresponding link
+    const currentPath = window.location.pathname;
+    for (const link of document.querySelectorAll("nav a")) {
+        if (link.getAttribute("href") === currentPath) {
+            link.classList.add("active");
+            break;
+        }
+    }
+});
+</script>
+        <main><script defer src="/assets/scripts/post.js"></script>
+<style>
+    main img{
+        cursor: pointer;
+    }
+
+    main img:hover{
+        filter: brightness(0.9);
+    }
+
+    dialog img{
+        width: 100%;
+        height: auto;
+        filter: none !important;
+    }
+</style>
+
+<h1 class="post-title">analytics with duckdb</h1>
+<p></p>
+
+<!-- Meta -->
+<div class="post-author">
+    <img src="/assets/spaghetti.webp" />
+    <div>
+        <p>
+            <span>By kaangiray26</span>
+        </p>
+        <p>
+            <time datetime="2024-08-03T00:00:00+02:00">
+                Aug 3, 2024
+            </time>
+        </p>
+    </div>
+</div>
+
+<!-- Divider -->
+<hr />
+
+<!-- Content -->
+<p>Recently, I’ve become curious about the visitor statistics of my websites. After a quick search, I decided to just build my own analytics solution
+to avoid any big brother-like companies (I’m looking at you big 5). So, here we are, building a simple analytics solution with <a href="https://duckdb.org/">DuckDB</a>.</p>
+
+<p>For those who don’t know, <strong>DuckDB</strong> is mostly used for data analysis while offering a SQL dialect. It can be used to import data from <strong>CSV</strong>, <strong>JSON</strong>, and <strong>Parquet</strong> files. Installing it to be used with Python is as simple as running <code class="language-plaintext highlighter-rouge">pip install duckdb</code>. In this project, I will be using <strong>DuckDB</strong> to store the visitor statistics of my websites.</p>
+
+<p>The whole application is just a simple <a href="https://flask.palletsprojects.com/en/2.0.x/">Flask</a> web server that listens for incoming beacon requests and adds them to the database. The beacon requests are just <strong>POST</strong> requests with a <strong>JSON</strong> body that contains the visitor’s origin of the request and path. The server then adds them to the database along with the hashed IP address of the visitor for counting unique visitors.</p>
+
+<p>For viewing the statistics, I’ve built a simple dashboard with <a href="https://vuejs.org/guide/quick-start.html#using-vue-from-cdn">Vue</a> from CDN, so that I can just serve the page as a static file from the Flask server.</p>
+
+<p>Here’s how it looks like:</p>
+
+<p><img src="https://kaangiray26.github.io/analytics/screenshot.png" alt="Dashboard" /></p>
+
+<p>To easily add it as a service to my server, I’ve also created a <a href="https://hub.docker.com/repository/docker/kaangiray26/analytics">Docker image</a> on the hub. Let me show you how to add it to your <code class="language-plaintext highlighter-rouge">docker-compose.yml</code>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">services</span><span class="pi">:</span>
+    <span class="na">analytics</span><span class="pi">:</span>
+        <span class="na">image</span><span class="pi">:</span> <span class="s">kaangiray26/analytics</span>
+        <span class="na">restart</span><span class="pi">:</span> <span class="s">on-failure</span>
+        <span class="na">ports</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="s2">"</span><span class="s">5000:5000"</span>
+        <span class="na">environment</span><span class="pi">:</span>
+            <span class="na">SITES</span><span class="pi">:</span> <span class="s2">"</span><span class="s">null,</span><span class="nv"> </span><span class="s">https://example.com"</span>
+            <span class="na">ADDRESS</span><span class="pi">:</span> <span class="s2">"</span><span class="s">192.168.1.1:5000"</span>
+
+    <span class="na">silly-project1</span><span class="pi">:</span>
+        <span class="na">build</span><span class="pi">:</span> <span class="s">.</span>
+        <span class="na">restart</span><span class="pi">:</span> <span class="s">on-failure</span>
+
+    <span class="na">silly-project2</span><span class="pi">:</span>
+        <span class="na">build</span><span class="pi">:</span> <span class="s">.</span>
+        <span class="na">restart</span><span class="pi">:</span> <span class="s">on-failure</span>
+    <span class="s">...</span>
+</code></pre></div></div>
+<p>See the <code class="language-plaintext highlighter-rouge">analytics</code> service? You can specify which sites you want to set as valid origins for the beacon requests with the <code class="language-plaintext highlighter-rouge">SITES</code> environment variable, which is a comma-separated list of URLs. You should also specify the local ip address of the server with the <code class="language-plaintext highlighter-rouge">ADDRESS</code> environment variable, so that you can access the dashboard from the same network.</p>
+
+<p>How to use it? We have the include the following script in the body of the pages we want to track like this:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">defer</span><span class="nt">&gt;</span>
+    <span class="p">(</span><span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">DOMContentLoaded</span><span class="dl">"</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="nf">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://home.buzl.uk:8443/analytics/beacon</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+                <span class="na">method</span><span class="p">:</span> <span class="dl">"</span><span class="s2">POST</span><span class="dl">"</span><span class="p">,</span>
+                <span class="na">headers</span><span class="p">:</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">Content-Type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">application/json</span><span class="dl">"</span> <span class="p">},</span>
+                <span class="na">body</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nf">stringify</span><span class="p">({</span>
+                    <span class="na">origin</span><span class="p">:</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">origin</span><span class="p">,</span>
+                    <span class="na">path</span><span class="p">:</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">pathname</span><span class="p">,</span>
+                <span class="p">}),</span>
+            <span class="p">});</span>
+        <span class="p">});</span>
+    <span class="p">})();</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+<p>This script sends a <strong>POST</strong> request to the server after the page has loaded.</p>
+
+<p>That’s it! To view the statistics, just visit the address you’ve specified in the <code class="language-plaintext highlighter-rouge">ADDRESS</code> environment variable.</p>
+
+<p>I hope you’ve found this post not so boring and maybe even useful.</p>
+
+<ul>
+  <li><a href="https://github.com/kaangiray26/analytics">source code</a></li>
+</ul>
+
+
+<!-- Postscript -->
+
+
+<!-- Image dialog -->
+<dialog id="image-dialog" onclick="this.close()">
+    <img src="" alt="" />
+</dialog>
+<webmentions>
+    <h3>Webmentions</h3>
+</webmentions>
+<script src="/assets/scripts/webmentions.js"></script>
+</main>
+        <footer>
+    <a href="feed.xml">RSS</a>
+    <p>
+        Licensed under the
+        <a
+            target="_blank"
+            href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            >CC BY-NC-SA 4.0 License</a
+        >.
+    </p>
+    <p>Copyright © <time id="date"></time> Kaan Giray Buzluk</p>
+    <img src="/assets/lf1B0.gif" class="mate" />
+</footer>
+
+<script type="module">
+    window.addEventListener("load", async () => {
+        const date = new Date().getFullYear();
+        document.getElementById("date").textContent = date;
+    });
+</script>
+
+    </body>
+</html>
