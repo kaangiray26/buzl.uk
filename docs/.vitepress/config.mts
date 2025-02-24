@@ -14,12 +14,6 @@ export default defineConfig({
             { text: "Now", link: "/now" },
             { text: "Links", link: "/links" },
         ],
-        sidebar: [
-            {
-                text: "Posts",
-                items: [],
-            },
-        ],
         socialLinks: [
             { icon: "github", link: "https://github.com/kaangiray26" },
         ],
