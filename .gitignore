@@ -1,3 +1,5 @@
-*.lock
-.jekyll-cache
-_site
+old
+node_modules
+package-lock.json
+docs/.vitepress/dist
+docs/.vitepress/cache
